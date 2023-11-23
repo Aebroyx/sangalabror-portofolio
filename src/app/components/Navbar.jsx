@@ -1,7 +1,7 @@
 export default function Navbar() {
     return(
         <>
-            <nav className="h-16 flex bg-violet-500 text-white">
+            <nav className="sticky top-0 h-16 flex bg-violet-500 text-white">
                 <div className="flex-1 flex items-center pl-6">
                     <h1 className="text-xl">
                         Sangalabror Pujianto
@@ -12,10 +12,10 @@ export default function Navbar() {
                         About
                     </h1>
                     <h1>
-                        Experience
+                        Certification & Education
                     </h1>
                     <h1>
-                        Certification & Education
+                        Experience
                     </h1>
                     <h1>
                         Contact Me
