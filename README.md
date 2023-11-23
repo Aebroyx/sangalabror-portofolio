@@ -1,3 +1,13 @@
+This is a portofolio website of Sangalabror Pujianto made by yours truly.
+
+## Addition to next.js frameworks
+daisyUI is added as a component library for Tailwind CSS
+```bash
+npm i -D daisyui@latest
+```
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
