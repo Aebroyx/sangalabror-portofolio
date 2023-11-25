@@ -3,8 +3,7 @@ import './globals.css'
 
 // Components
 import Navbar from './components/Navbar'
-import Sidenav from './components/Sidenav'
-import Sidenav2 from './components/Sidenav2'
+import Footer from './components/Footer'
 
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
@@ -18,9 +17,8 @@ export default function RootLayout({ children }) {
     <html id='app' lang="en">
         <body className={jakartaSans.className}>
           <Navbar />
-          <Sidenav />
-          <Sidenav2 />
           {children}
+          <Footer />
         </body>
     </html>
   )
