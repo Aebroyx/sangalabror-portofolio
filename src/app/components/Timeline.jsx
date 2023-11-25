@@ -24,7 +24,7 @@ export default function Timeline() {
                     <div className="timeline-end mb-10 text-white">
                     <time className="font-mono italic text-white">2023</time>
                     <div className="text-lg text-primary">Universitas Gadjah Mada</div>
-                    International Undergraduate Program (IUP) Computer Science | GPA = 3.31
+                    International Undergraduate Program (IUP) | Computer Science
                     <br />
                     Academic Thesis: THE DEVELOPMENT OF FACE RECOGNITION SYSTEM IN COMPUTER VISION USING DEEP
                     LEARNING: DEEP SIAMESE NETWORKS METHOD

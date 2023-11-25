@@ -76,7 +76,7 @@ export default function About() {
                     <div className="flex flex-col font-bold text-primary text-5xl gap-5 ml-32">
                         <div>
                             <Link href='/education' className="group transition duration-300">
-                                Ceritfication & Education
+                                Certification & Education
                                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-primary"></span>
                             </Link>
                         </div>
