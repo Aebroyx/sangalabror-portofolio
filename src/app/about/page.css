@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+    #aboutmobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #selector {
+        display: none;
+    }
+    
+    #aboutdesktop {
+        display: none;
+    }
+}
