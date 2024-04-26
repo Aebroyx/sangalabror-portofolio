@@ -19,6 +19,30 @@ export default function Experience() {
                             Work Experience
                         </h1>
                         <div className="join join-vertical w-full">
+                        <div className="collapse collapse-arrow join-item border border-base-300 p-6">
+                            <input type="radio" name="my-accordion-4" checked={selectedOption === 3} onChange={handleRadioChange} value={3}/> 
+                                <div className="collapse-title text-xl font-medium text-white">
+                                Modena
+                                </div>
+                                <div className="collapse-content">
+                                    <div className='flex flex-col gap-2'>
+                                        <p className='text-slate-200 text-sm'>March 2024 - Present</p>
+                                        <h3 className='text-primary text-xl'>Fullstack Developer Intern</h3>
+                                        <ul className="list-disc text-white">
+                                            <li>Responsible for the development of fullstack internal projects that accommodate users to directly interact with SAP database and its business processes.</li>  
+                                        </ul>
+                                        <div className='flex gap-2 mt-6'>
+                                            <div className="badge bg-primary text-white badge-md">Javascript</div>
+                                            <div className="badge bg-primary text-white badge-md">PHP</div>
+                                            <div className="badge bg-primary text-white badge-md">HTML</div>
+                                            <div className="badge bg-primary text-white badge-md">CSS</div>
+                                            <div className="badge bg-primary text-white badge-md">React JS</div>
+                                            <div className="badge bg-primary text-white badge-md">Laravel</div>
+                                            <div className="badge bg-primary text-white badge-md">Hyperf</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div className="collapse collapse-arrow join-item border border-base-300 p-6">
                             <input type="radio" name="my-accordion-4" checked={selectedOption === 1} onChange={handleRadioChange} value={1}/> 
                                 <div className="collapse-title text-xl font-medium text-white">
@@ -63,22 +87,6 @@ export default function Experience() {
                                             <div className="badge bg-primary text-white badge-md">PHP Wordpress</div>
                                             <div className="badge bg-primary text-white badge-md">Figma</div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="collapse collapse-arrow join-item border border-base-300 p-6">
-                            <input type="radio" name="my-accordion-4" checked={selectedOption === 3} onChange={handleRadioChange} value={3}/> 
-                                <div className="collapse-title text-xl font-medium text-white">
-                                Himpunan Mahasiswa Ilmu Komputer
-                                </div>
-                                <div className="collapse-content">
-                                    <div className='flex flex-col gap-2'>
-                                        <p className='text-slate-200 text-sm'>August 2019 - July 2020</p>
-                                        <h3 className='text-primary text-xl'>Interests and Talents Division - University of Gadjah Mada</h3>
-                                        <ul className="list-disc text-white">
-                                            <li>Responsible for conceptualizing and arranging multiple charity events</li>  
-                                        </ul>
-                                        <div className="badge bg-primary text-white badge-md mt-6">Event Organizing</div>
                                     </div>
                                 </div>
                             </div>
