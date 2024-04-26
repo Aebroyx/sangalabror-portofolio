@@ -65,31 +65,31 @@ export default function About() {
                         </h2>
                         <br/>
                         <h3 className='text-white'>
-                        A motivated individual who has been aspiring to be a Software Developer since early age. I have now specialized in full stack software
-                        development. I consider myself to be versatile and can adapt and overcome different challenges. Efficiently skilled
-                        in problem solving. Has worked around technologies at an early age which lead to my pursuit of my Computer
-                        Science degree.
+                        A motivated Software Developer that specializes in full stack software development. I consider myself to be versatile and can adapt and overcome different challenges. 
+                        Efficiently skilled in problem solving.  Has worked around technologies at an early age which lead to my pursuit of my Computer Science degree. 
+                        The tech stack I am proficient at includes but not limited to <span className="text-primary">Javascript/Typescript, ReactJS, Next.JS, Express JS, Prisma and mySQL</span>. With my versatility and eagerness to learn, 
+                        I am always looking forward to be proficient in many more technologies.
                         </h3>
                     </section>
                 </div>
                 <div id="selector" className="flex-1 flex justify-center items-center">
                     <div className="flex flex-col font-bold text-primary text-5xl gap-5 ml-32">
                         <div>
-                            <Link href='/education' className="group transition duration-300">
+                            <Link href='/education' className="group inline-block transition duration-300">
                                 Certification & Education
-                                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-primary"></span>
+                                <span className="block w-0 group-hover:w-full transition-all duration-500 h-1 bg-primary"></span>
                             </Link>
                         </div>
                         <div>
-                            <Link href='/experience' className="group transition duration-300">
+                            <Link href='/experience' className="group inline-block transition duration-300">
                                 Experience
-                                <span className="block max-w-0 group-hover:max-w-[265px] transition-all duration-500 h-1 bg-primary"></span>
+                                <span className="block w-0 group-hover:w-full transition-all duration-500 h-1 bg-primary"></span>
                             </Link>
                         </div>
                         <div>
-                            <Link href='/projects' className="group transition duration-300">
+                            <Link href='/projects' className="group inline-block transition duration-300">
                                 Projects
-                                <span className="block max-w-0 group-hover:max-w-[200px] transition-all duration-500 h-1 bg-primary"></span>
+                                <span className="block w-0 group-hover:w-full transition-all duration-500 h-1 bg-primary"></span>
                             </Link>
                         </div>
                     </div>
