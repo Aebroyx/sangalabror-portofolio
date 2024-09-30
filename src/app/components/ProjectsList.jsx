@@ -1,9 +1,11 @@
+import Link from 'next/link';
 
 export default function ProjectsList() {
     const projects = [
         {
             id: 1,
             name: 'B2B Modena',
+            route: '/b2bmodena',
             link: 'https://partner.modena.com',
             link_name: 'partner.modena.com',
             description: 'Responsible for fullstack development of Modena B2B, a comprehensive web application designed to streamline and automate business processes between dealers and vendors. The application facilitates various critical operations including but not limited to; purchase request, purchase order, goods receipt, asset validation, invoice, payment, etc. The application behaves as a mini-ERP and some processes are integrated with SAP.',
@@ -12,6 +14,7 @@ export default function ProjectsList() {
         {
             id: 2,
             name: 'TPMS (Project Management System) Modena',
+            route: '/tpmsmodena',
             link: 'https://tpms.modena.com',
             link_name: 'tpms.modena.com',
             description: 'Responsible for the fullstack development of an agile sprint planner web application, similar to JIRA, for project management. Key features include; Sprint Milestones: Users can add tasks with effort measured in story points and manage tasks through drag-and-drop functionality, transitioning tasks from “In Progress” to “Ready to Test,” “Defect,” and “Done. Timesheet Management: Users can input the number of hours spent on tasks to record progress accurately. QA Integration: Allows testers to add test cases to each task. Developers can view task-specific bugs/defects and detailed bug information for efficient resolution.',
@@ -20,6 +23,7 @@ export default function ProjectsList() {
         {
             id: 3,
             name: 'Autosave Website',
+            route: '/autosave',
             link: '',
             link_name: '-',
             description: 'Responsible for the fullstack development of a media company website that allows users to see various of articles related to all things pop culture; anime and games',
@@ -33,9 +37,11 @@ export default function ProjectsList() {
                     {projects.map((project) => (
                         <li key={project.id} className="py-4">
                             <div className="text-center">
-                                <h1 className="text-4xl text-white font-semibold transition duration-300 ease-in-out transform hover:text-primary hover:scale-110 cursor-pointer">
-                                    {project.name}
-                                </h1>
+                                <Link href={`/projects/${project.route}`}>
+                                    <h1 className="text-4xl text-white font-semibold transition duration-300 ease-in-out transform hover:text-primary hover:scale-110 cursor-pointer">
+                                        {project.name}
+                                    </h1>
+                                </Link>
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-primary">
                                     {project.link_name}
                                 </a>
