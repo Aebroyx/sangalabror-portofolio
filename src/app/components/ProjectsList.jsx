@@ -4,15 +4,23 @@ export default function ProjectsList() {
     const projects = [
         {
             id: 1,
+            name: 'Modena Website',
+            route: '/modena',
+            link: 'https://modena.com/id_id',
+            link_name: 'modena.com',
+            description: 'Responsible for the fullstack development of a number of features and pages of the Modena website, a comprehensive web application designed showcases Modena’s products and services. The website allows users to buy products, book services, and access information about Modena’s products and services.',
+        },
+        {
+            id: 2,
             name: 'B2B Modena',
             route: '/b2bmodena',
             link: 'https://partner.modena.com',
             link_name: 'partner.modena.com',
-            description: 'Responsible for fullstack development of Modena B2B, a comprehensive web application designed to streamline and automate business processes between dealers and vendors. The application facilitates various critical operations including but not limited to; purchase request, purchase order, goods receipt, asset validation, invoice, payment, etc. The application behaves as a mini-ERP and some processes are integrated with SAP.',
+            description: 'Responsible for the fullstack development of Modena B2B, a comprehensive web application designed to streamline and automate business processes between dealers and vendors. The application facilitates various critical operations including but not limited to; purchase request, purchase order, goods receipt, asset validation, invoice, payment, etc. The application behaves as a mini-ERP and some processes are integrated with SAP.',
             href: '#',
         },
         {
-            id: 2,
+            id: 3,
             name: 'TPMS (Project Management System) Modena',
             route: '/tpmsmodena',
             link: 'https://tpms.modena.com',
@@ -21,7 +29,7 @@ export default function ProjectsList() {
             href: '#',
         },
         {
-            id: 3,
+            id: 4,
             name: 'Autosave Website',
             route: '/autosave',
             link: '',
