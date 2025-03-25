@@ -20,7 +20,7 @@ export default function About() {
                             </h2>
                             <br/>
                             <h3 className='text-white'>
-                                I'm a versatile Fullstack Developer skilled in building scalable applications and quickly adapting to diverse tech stacks. My expertise includes integrating complex business systems like SAP and ERP. Strong in analytical thinking and clear communication, I collaborate effectively across teams and thrive in dynamic environments.
+                                I&apos;m a versatile Fullstack Developer skilled in building scalable applications and quickly adapting to diverse tech stacks. My expertise includes integrating complex business systems like SAP and ERP. Strong in analytical thinking and clear communication, I collaborate effectively across teams and thrive in dynamic environments.
                             </h3>
                         </div>
                         <div className="flex flex-col justfiy-center items-center font-bold text-primary text-4xl gap-5 mb-28">
@@ -62,7 +62,7 @@ export default function About() {
                         </h2>
                         <br/>
                         <h3 className='text-white'>
-                            I'm a motivated and versatile Fullstack Developer with a passion for crafting robust, scalable software solutions. My journey into technology began early, fueling my pursuit of a Computer Science degree and driving my eagerness to explore new tech stacks continuously. I'm proficient in <span className="text-primary">JavaScript/TypeScript, ReactJS, Next.js, Express.js, Prisma, and MySQL</span> for web, and I thrive when transforming complex requirements into seamless, user-centric applications. With hands-on experience bridging technical execution with business objectives, especially in systems integrating SAP and ERP solutions, I bring both analytical insight and practical expertise to every project. Beyond coding, I excel in critical thinking, clear communication, and effective collaboration with both technical and non-technical stakeholders. Always curious and ready to adapt, I'm excited to embrace new challenges and contribute meaningfully in dynamic environments
+                            I&apos;m a motivated and versatile Fullstack Developer with a passion for crafting robust, scalable software solutions. My journey into technology began early, fueling my pursuit of a Computer Science degree and driving my eagerness to explore new tech stacks continuously. I'm proficient in <span className="text-primary">JavaScript/TypeScript, ReactJS, Next.js, Express.js, Prisma, and MySQL</span> for web, and I thrive when transforming complex requirements into seamless, user-centric applications. With hands-on experience bridging technical execution with business objectives, especially in systems integrating SAP and ERP solutions, I bring both analytical insight and practical expertise to every project. Beyond coding, I excel in critical thinking, clear communication, and effective collaboration with both technical and non-technical stakeholders. Always curious and ready to adapt, I'm excited to embrace new challenges and contribute meaningfully in dynamic environments
                         </h3>
                     </section>
                 </div>
