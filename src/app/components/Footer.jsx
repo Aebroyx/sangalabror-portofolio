@@ -23,13 +23,13 @@ export default function Footer() {
         <>
             <footer className="fixed bottom-0 left-0 w-full pb-12 mt-[-152px] transition-bottom duration-300">
                 <div className="flex justify-center items-center gap-8">
-                    <a href="https://www.linkedin.com/in/sangalabrorpujianto/" className="text-4xl text-primary hover:scale-150 transform transition-transform duration-300">
+                    <a href="https://www.linkedin.com/in/sangalabrorpujianto/" className="text-2xl md:text-4xl text-primary hover:scale-150 transform transition-transform duration-300">
                         <FaLinkedin />
                     </a>
-                    <a href="https://github.com/Aebroyx" className="text-4xl text-primary hover:scale-150 transform transition-transform duration-300">
+                    <a href="https://github.com/Aebroyx" className="text-2xl md:text-4xl text-primary hover:scale-150 transform transition-transform duration-300">
                         <FaGithub />
                     </a>
-                    <a href="https://www.instagram.com/abrorpujianto/" className="text-4xl text-primary hover:scale-150 transform transition-transform duration-300">
+                    <a href="https://www.instagram.com/abrorpujianto/" className="text-2xl md:text-4xl text-primary hover:scale-150 transform transition-transform duration-300">
                         <FaInstagram />
                     </a>
                 </div>
