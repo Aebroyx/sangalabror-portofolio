@@ -5,7 +5,7 @@ export default function About() {
     return(
         <>
             {/* Mobile */}
-            <div id='aboutmobile' className="flex h-screen">
+            <div id='aboutmobile' className="flex h-screen pt-24">
                 <div className='flex flex-col justify-center items-center mx-6'>
                     <section>
                         <div className="mb-12">
@@ -20,10 +20,7 @@ export default function About() {
                             </h2>
                             <br/>
                             <h3 className='text-white'>
-                                A motivated individual who has been aspiring to be a Software Developer since early age. I have now specialized in full stack software
-                                development. I consider myself to be versatile and can adapt and overcome different challenges. Efficiently skilled
-                                in problem solving. Has worked around technologies at an early age which lead to my pursuit of my Computer
-                                Science degree.
+                                I'm a versatile Fullstack Developer skilled in building scalable applications and quickly adapting to diverse tech stacks. My expertise includes integrating complex business systems like SAP and ERP. Strong in analytical thinking and clear communication, I collaborate effectively across teams and thrive in dynamic environments.
                             </h3>
                         </div>
                         <div className="flex flex-col justfiy-center items-center font-bold text-primary text-4xl gap-5 mb-28">
@@ -65,10 +62,7 @@ export default function About() {
                         </h2>
                         <br/>
                         <h3 className='text-white'>
-                        A motivated Software Developer that specializes in full stack software development. I consider myself to be versatile and can adapt and overcome different challenges. 
-                        Efficiently skilled in problem solving.  Has worked around technologies at an early age which lead to my pursuit of my Computer Science degree. 
-                        The tech stack I am proficient at includes but not limited to <span className="text-primary">Javascript/Typescript, ReactJS, Next.JS, Express JS, Prisma and mySQL</span>. With my versatility and eagerness to learn, 
-                        I am always looking forward to be proficient in many more technologies.
+                            I'm a motivated and versatile Fullstack Developer with a passion for crafting robust, scalable software solutions. My journey into technology began early, fueling my pursuit of a Computer Science degree and driving my eagerness to explore new tech stacks continuously. I'm proficient in <span className="text-primary">JavaScript/TypeScript, ReactJS, Next.js, Express.js, Prisma, and MySQL</span> for web, and I thrive when transforming complex requirements into seamless, user-centric applications. With hands-on experience bridging technical execution with business objectives, especially in systems integrating SAP and ERP solutions, I bring both analytical insight and practical expertise to every project. Beyond coding, I excel in critical thinking, clear communication, and effective collaboration with both technical and non-technical stakeholders. Always curious and ready to adapt, I'm excited to embrace new challenges and contribute meaningfully in dynamic environments
                         </h3>
                     </section>
                 </div>
