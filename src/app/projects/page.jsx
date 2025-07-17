@@ -6,7 +6,7 @@ export default function Projects() {
     
     return(
         <>
-            <div className="flex h-screen">
+            <div className="flex flex-col items-center justify-center w-full h-full flex-1">
                 <div className="w-1/12">
                 </div>
                 <div className="flex-grow flex justify-center items-center">

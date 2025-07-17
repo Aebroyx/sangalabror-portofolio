@@ -15,9 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html id='app' lang="en">
-        <body className={jakartaSans.className}>
+        <body className={`flex flex-col min-h-screen ${jakartaSans.className}`}>
           <Navbar />
-          {children}
+          <main className="flex-1 flex flex-col items-center justify-center w-full">
+            {children}
+          </main>
           <Footer />
         </body>
     </html>

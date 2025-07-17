@@ -10,10 +10,8 @@ export default function Experience() {
 
     return(
         <>
-            <div className="flex flex-col lg:flex-row h-screen">
-                <div className="w-full lg:w-1/6">
-                </div>
-                <div className="flex-1 flex justify-center items-center px-4 lg:px-0">
+            <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full flex-1 px-4 md:px-12 lg:px-24 xl:px-32">
+                <div className="flex-1 flex justify-center items-center">
                     <section className="w-full max-w-4xl">
                         <h1 className="text-3xl text-white font-bold pb-5 text-center lg:text-left">
                             Work Experience
@@ -92,8 +90,6 @@ export default function Experience() {
                             </div>
                         </div>
                     </section>
-                </div>
-                <div className="w-full lg:w-1/6">
                 </div>
             </div>
         </>

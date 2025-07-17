@@ -1,9 +1,6 @@
 export default function Timeline() {
     return(
         <>
-            <h1 className="text-3xl text-white font-bold pb-5">
-                Certification & Education
-            </h1>
             <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                 <li>
                     <div className="timeline-middle">
