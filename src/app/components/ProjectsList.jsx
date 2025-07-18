@@ -21,7 +21,7 @@ export default function ProjectsList() {
         },
         {
             id: 3,
-            name: 'TPMS (Project Management System) Modena',
+            name: 'TPMS Modena',
             route: '/tpmsmodena',
             link: 'https://tpms.modena.com',
             link_name: 'tpms.modena.com',
@@ -46,7 +46,7 @@ export default function ProjectsList() {
                         <li key={project.id} className="py-4">
                             <div className="text-center">
                                 <Link href={`/projects/${project.route}`}>
-                                    <h1 className="text-4xl text-white font-semibold transition duration-300 ease-in-out transform hover:text-primary hover:scale-110 cursor-pointer">
+                                    <h1 className="text-3xl text-white font-semibold transition duration-300 ease-in-out transform hover:text-primary hover:scale-110 cursor-pointer">
                                         {project.name}
                                     </h1>
                                 </Link>
