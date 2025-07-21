@@ -1,9 +1,9 @@
 "use client"
 import Image from 'next/image';
-import B2BLoginSVG from '../../../../public/b2blogin.svg'
-import B2BPRListSVG from '../../../../public/b2bprlist.svg'
-import B2BPOFormSVG from '../../../../public/b2bpoform.svg'
-import B2BGRFormSVG from '../../../../public/b2bgrform.svg'
+import B2BLogin from '../../../../public/b2blogin.png'
+import B2BPRList from '../../../../public/b2bprlist.png'
+import B2BPOForm from '../../../../public/b2bpoform.png'
+import B2BGRForm from '../../../../public/b2bgrform.png'
 import { useEffect, useState } from 'react';
 import ModalViewImage from '@/app/components/ModalViewImage';
 import { ArrowsPointingOutIcon, EyeIcon } from '@heroicons/react/24/outline';
@@ -93,41 +93,41 @@ export default function B2BModena() {
                             <h2 className="text-center text-3xl font-semibold text-white">Showcase</h2>
                         </div>
                         <div className="grid grid-cols-1 gap-4 mt-4 lg:grid-cols-6 lg:grid-rows-2">
-                            <div className="flex p-px w-full sm:h-auto lg:col-span-4" onClick={() => handleOnViewImage(B2BLoginSVG)}>
+                            <div className="flex p-px w-full sm:h-auto lg:col-span-4" onClick={() => handleOnViewImage(B2BLogin)}>
                                 <div className="relative overflow-hidden rounded-lg bg-primary ring-1 ring-primary max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem] w-full h-full group">
-                                    <Image src={B2BLoginSVG} alt="B2B Login" layout="responsive" objectFit="cover" width={300} height={300} />
+                                    <Image src={B2BLogin} alt="B2B Login" layout="responsive" objectFit="cover" width={300} height={300} />
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex p-px lg:col-span-2 sm:h-auto" onClick={() => handleOnViewImage(B2BPRListSVG)}>
+                            <div className="flex p-px lg:col-span-2 sm:h-auto" onClick={() => handleOnViewImage(B2BPRList)}>
                                 <div className="relative overflow-hidden rounded-lg bg-primary ring-1 ring-primary lg:rounded-tr-[2rem] w-full h-full group">
                                     {isXL ? (
-                                        <Image src={B2BPRListSVG} alt="B2B PR List" layout="fill" objectFit="cover" />
+                                        <Image src={B2BPRList} alt="B2B PR List" layout="fill" objectFit="cover" />
                                     ) : (
-                                        <Image src={B2BPRListSVG} alt="B2B PR List" layout="responsive" objectFit="cover" width={300} height={300} />
+                                        <Image src={B2BPRList} alt="B2B PR List" layout="responsive" objectFit="cover" width={300} height={300} />
                                     )}
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex p-px lg:col-span-2 sm:h-auto" onClick={() => handleOnViewImage(B2BPOFormSVG)}>
+                            <div className="flex p-px lg:col-span-2 sm:h-auto" onClick={() => handleOnViewImage(B2BPOForm)}>
                                 <div className="relative overflow-hidden rounded-lg bg-primary ring-1 ring-primary lg:rounded-bl-[2rem] w-full h-full group">
                                     {isXL ? (
-                                        <Image src={B2BPOFormSVG} alt="B2B PO Form" layout="fill" objectFit="cover" />
+                                        <Image src={B2BPOForm} alt="B2B PO Form" layout="fill" objectFit="cover" />
                                     ) : (
-                                        <Image src={B2BPOFormSVG} alt="B2B PO Form" layout="responsive" objectFit="cover" width={300} height={300} />
+                                        <Image src={B2BPOForm} alt="B2B PO Form" layout="responsive" objectFit="cover" width={300} height={300} />
                                     )}
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex p-px lg:col-span-4 w-full" onClick={() => handleOnViewImage(B2BGRFormSVG)}>
+                            <div className="flex p-px lg:col-span-4 w-full" onClick={() => handleOnViewImage(B2BGRForm)}>
                                 <div className="relative overflow-hidden rounded-lg bg-primary ring-1 ring-primary max-lg:rounded-b-[2rem] lg:rounded-br-[2rem] w-full h-full group">
-                                    <Image src={B2BGRFormSVG} alt="B2B GR Form" layout="responsive" objectFit="cover" width={300} height={300} />
+                                    <Image src={B2BGRForm} alt="B2B GR Form" layout="responsive" objectFit="cover" width={300} height={300} />
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
