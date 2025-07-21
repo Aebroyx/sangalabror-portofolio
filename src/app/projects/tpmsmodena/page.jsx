@@ -1,9 +1,9 @@
 "use client"
 import Image from 'next/image';
-import tpmsdashboard from '../../../../public/tpmsdashboard.svg';
-import tpmsprofile from '../../../../public/tpmsprofile.svg';
-import tpmsproject from '../../../../public/tpmsproject.svg';
-import tpmskanban from '../../../../public/tpmskanban.svg';
+import tpmsdashboard from '../../../../public/tpmsdashboard.png';
+import tpmsprofile from '../../../../public/tpmsprofile.png';
+import tpmsproject from '../../../../public/tpmsproject.png';
+import tpmskanban from '../../../../public/tpmskanban.png';
 import { useEffect, useState } from 'react';
 import ModalViewImage from '@/app/components/ModalViewImage';
 import { ArrowsPointingOutIcon } from '@heroicons/react/24/outline';
