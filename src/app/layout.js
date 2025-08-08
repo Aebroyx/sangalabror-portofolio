@@ -1,5 +1,6 @@
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Components
 import Navbar from './components/Navbar'
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <SpeedInsights />
         </body>
     </html>
   )

@@ -1,5 +1,3 @@
-import Carousel from "../components/Carousel"
-import Image from "next/image"
 import ProjectsList from "../components/ProjectsList"
 
 export default function Projects() {
