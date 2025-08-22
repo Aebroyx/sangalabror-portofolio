@@ -4,23 +4,15 @@ export default function ProjectsList() {
     const projects = [
         {
             id: 1,
-            name: 'Modena Website',
-            route: '/modena',
-            link: 'https://modena.com/id_id',
-            link_name: 'modena.com',
-            description: 'Responsible for the fullstack development of a number of features and pages of the Modena website, a comprehensive web application designed showcases Modena’s products and services. The website allows users to buy products, book services, and access information about Modena’s products and services.',
-        },
-        {
-            id: 2,
-            name: 'B2B Modena',
-            route: '/b2bmodena',
-            link: 'https://partner.modena.com',
-            link_name: 'partner.modena.com',
-            description: 'Responsible for the fullstack development of Modena B2B, a comprehensive web application designed to streamline and automate business processes between dealers and vendors. The application facilitates various critical operations including but not limited to; purchase request, purchase order, goods receipt, asset validation, invoice, payment, etc. The application behaves as a mini-ERP and some processes are integrated with SAP.',
+            name: 'Autosave Website',
+            route: '/autosave',
+            link: '',
+            link_name: '-',
+            description: 'Responsible for the fullstack development of a media company website that allows users to see various of articles related to all things pop culture; anime and games',
             href: '#',
         },
         {
-            id: 3,
+            id: 2,
             name: 'TPMS Modena',
             route: '/tpmsmodena',
             link: 'https://tpms.modena.com',
@@ -29,20 +21,36 @@ export default function ProjectsList() {
             href: '#',
         },
         {
-            id: 4,
-            name: 'Autosave Website',
-            route: '/autosave',
-            link: '',
-            link_name: '-',
-            description: 'Responsible for the fullstack development of a media company website that allows users to see various of articles related to all things pop culture; anime and games',
+            id: 3,
+            name: 'B2B Modena',
+            route: '/b2bmodena',
+            link: 'https://partner.modena.com',
+            link_name: 'partner.modena.com',
+            description: 'Responsible for the fullstack development of Modena B2B, a comprehensive web application designed to streamline and automate business processes between dealers and vendors. The application facilitates various critical operations including but not limited to; purchase request, purchase order, goods receipt, asset validation, invoice, payment, etc. The application behaves as a mini-ERP and some processes are integrated with SAP.',
             href: '#',
         },
+        {
+            id: 4,
+            name: 'Modena Website',
+            route: '/modena',
+            link: 'https://modena.com/id_id',
+            link_name: 'modena.com',
+            description: 'Responsible for the fullstack development of a number of features and pages of the Modena website, a comprehensive web application designed showcases Modena’s products and services. The website allows users to buy products, book services, and access information about Modena’s products and services.',
+        },
+        {
+            id: 5,
+            name: 'Splitbill AI',
+            route: '/splitbill',
+            link: 'https://splitbill.aebroyx.dev',
+            link_name: 'splitbill.aebroyx.dev',
+            description: 'An AI app to split bills by scanning receipts using an LLM-based OCR.',
+        }
       ]
     return(
         <>
             <div className="max-h-[36rem] min-h-[36rem] overflow-y-auto overflow-x-hidden w-full max-w-4xl">
                 <ul role="list" className="">
-                    {projects.map((project) => (
+                    {projects.sort((a, b) => b.id - a.id).map((project) => (
                         <li key={project.id} className="py-4">
                             <div className="text-center">
                                 <Link href={`/projects/${project.route}`}>
