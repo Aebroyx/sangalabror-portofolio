@@ -1,12 +1,13 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 import modenaD1 from '../../../../public/modenaD1.png';
 import modenaD2 from '../../../../public/modenaD2.png';
 import modenaM1 from '../../../../public/modenaM1.png';
 import modenaM2 from '../../../../public/modenaM2.png';
 import { useEffect, useState } from 'react';
 import ModalViewImage from '@/app/components/ModalViewImage';
-import { ArrowsPointingOutIcon } from '@heroicons/react/24/outline';
+import { ArrowsPointingOutIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 export default function Modena() {
     const [isXL, setIsXL] = useState(false);
@@ -36,6 +37,12 @@ export default function Modena() {
         <div className="min-h-screen flex flex-col items-center justify-start py-8">
             <div className="py-12 sm:py-24">
                 <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+                    <div className="flex justify-end mb-6">
+                        <Link href="/projects" className="flex items-center gap-2 text-white hover:text-primary transition-colors duration-300">
+                            <ArrowLeftIcon className="h-6 w-6" />
+                            <span className="text-lg">Back to Projects</span>
+                        </Link>
+                    </div>
                     <h2 className="text-start text-base/7 font-semibold text-white">Project:</h2>
                     <p className="mt-2 max-w-lg text-pretty text-start text-4xl font-medium tracking-tight text-primary sm:text-5xl">
                     Modena Website
@@ -81,7 +88,7 @@ export default function Modena() {
                     </div>
                     <div className="grid grid-cols-1 gap-4 mt-4 lg:grid-cols-6 lg:grid-rows-2">
                         <div className="flex p-px w-full sm:h-auto lg:col-span-4" onClick={() => handleOnViewImage(modenaD1)}>
-                            <div className="relative overflow-hidden rounded-lg bg-primary ring-1 ring-primary max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem] w-full h-full group">
+                            <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem] w-full h-full group">
                                 <Image src={modenaD1} alt="Autosave Desktop 1" layout="responsive" objectFit="cover" width={300} height={300} />
                                 <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                     <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -89,7 +96,7 @@ export default function Modena() {
                             </div>
                         </div>
                         <div className="flex p-px lg:col-span-2 sm:h-auto" onClick={() => handleOnViewImage(modenaM1)}>
-                            <div className="relative overflow-hidden rounded-lg bg-primary ring-1 ring-primary lg:rounded-tr-[2rem] w-full h-full group">
+                            <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary lg:rounded-tr-[2rem] w-full h-full group">
                                 {isXL ? (
                                     <Image src={modenaM1} alt="Autosave Mobile 1" layout="fill" objectFit="cover" />
                                 ) : (
@@ -101,7 +108,7 @@ export default function Modena() {
                             </div>
                         </div>
                         <div className="flex p-px lg:col-span-2 sm:h-auto" onClick={() => handleOnViewImage(modenaM2)}>
-                            <div className="relative overflow-hidden rounded-lg bg-primary ring-1 ring-primary lg:rounded-bl-[2rem] w-full h-full group">
+                            <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary lg:rounded-bl-[2rem] w-full h-full group">
                                 {isXL ? (
                                     <Image src={modenaM2} alt="Autosave Mobile 2" layout="fill" objectFit="cover" />
                                 ) : (
@@ -113,7 +120,7 @@ export default function Modena() {
                             </div>
                         </div>
                         <div className="flex p-px lg:col-span-4 w-full" onClick={() => handleOnViewImage(modenaD2)}>
-                            <div className="relative overflow-hidden rounded-lg bg-primary ring-1 ring-primary max-lg:rounded-b-[2rem] lg:rounded-br-[2rem] w-full h-full group">
+                            <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary max-lg:rounded-b-[2rem] lg:rounded-br-[2rem] w-full h-full group">
                                 <Image src={modenaD2} alt="Autosave Desktop 2" layout="responsive" objectFit="cover" width={300} height={300} />
                                 <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                     <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
