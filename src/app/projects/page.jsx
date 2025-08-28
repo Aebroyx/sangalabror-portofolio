@@ -1,5 +1,14 @@
 import ProjectsList from "../components/ProjectsList"
 
+export const metadata = {
+  title: 'Projects',
+  description: 'Explore my portfolio of web development projects, mobile applications, and UI/UX designs. See my work in React, Next.js, and modern web technologies.',
+  openGraph: {
+    title: 'Projects - Sangalabror Pujianto',
+    description: 'Explore my portfolio of web development projects, mobile applications, and UI/UX designs. See my work in React, Next.js, and modern web technologies.',
+  },
+}
+
 export default function Projects() {
     
     return(
