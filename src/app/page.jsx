@@ -4,6 +4,15 @@ const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 // Pages
 import About from './about/page'
 
+export const metadata = {
+  title: 'Home',
+  description: 'Welcome to Sangalabror Pujianto\'s portfolio. Full Stack Developer and UI/UX Designer passionate about creating innovative digital solutions.',
+  openGraph: {
+    title: 'Sangalabror Pujianto - Portfolio Home',
+    description: 'Welcome to Sangalabror Pujianto\'s portfolio. Full Stack Developer and UI/UX Designer passionate about creating innovative digital solutions.',
+  },
+}
+
 export default function Home() {
   return (
       <main className={jakartaSans.className}>

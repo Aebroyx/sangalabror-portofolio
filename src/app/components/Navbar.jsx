@@ -12,11 +12,16 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div className="flex-none flex flex-row items-center gap-5 pr-6">
-                <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">
-                    <button className="btn bg-black text-white hover:bg-primary">
-                        Resume
-                    </button>
-                </a>
+                    <Link href="/links">
+                        <button className="btn bg-black text-white hover:bg-primary">
+                            Links
+                        </button>
+                    </Link>
+                    <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">
+                        <button className="btn bg-black text-white hover:bg-primary">
+                            Resume
+                        </button>
+                    </a>
                 </div>
             </nav>
         </>
