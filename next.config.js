@@ -43,12 +43,6 @@ const nextConfig = {
       },
     ]
   },
-  
-  // Enable experimental features for better performance
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['@heroicons/react', 'react-icons'],
-  },
 }
 
 module.exports = nextConfig
