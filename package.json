@@ -9,11 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.2",
     "@headlessui/react": "^2.1.8",
     "@heroicons/react": "^2.1.5",
     "@vercel/speed-insights": "^1.2.0",
-    "gsap": "^3.13.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",

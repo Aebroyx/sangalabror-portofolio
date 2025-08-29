@@ -1,28 +1,19 @@
 "use client"
-import React, { useState, useRef } from 'react';
-import { useGSAPAnimations } from '../components/useGSAPAnimations';
+import React, { useState } from 'react';
 
 export default function Experience() {
     const [selectedOption, setSelectedOption] = useState(1);
-    
-    // Refs for GSAP animations
-    const titleRef = useRef(null);
-    const accordionRef = useRef(null);
-    const accordionItemsRef = useRef(null);
 
     const handleRadioChange = (event) => {
       setSelectedOption(parseInt(event.target.value, 10));
     };
-
-    // Use the custom hook for GSAP animations
-    useGSAPAnimations({ titleRef, accordionRef, accordionItemsRef });
 
     return(
         <>
             <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full flex-1 px-4 md:px-12 lg:px-24 xl:px-32">
                 <div className="flex-1 flex justify-center items-center">
                     <section className="w-full max-w-4xl">
-                        <h1 className="text-3xl text-white font-bold pb-5 text-center lg:text-left" ref={titleRef}>
+                        <h1 className="text-3xl text-white font-bold pb-5 text-center lg:text-left">
                             Work Experience
                         </h1>
                         <div className="join join-vertical w-full" ref={accordionRef}>
