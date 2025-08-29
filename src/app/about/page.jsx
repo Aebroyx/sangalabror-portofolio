@@ -1,5 +1,8 @@
 import Link from "next/link"
 import './page.css'
+import { useEffect, useRef } from "react"
+import gsap from "gsap"
+import { TextPlugin } from "gsap/TextPlugin"
 
 export default function About() {
     return(
@@ -48,24 +51,24 @@ export default function About() {
             </div>
 
             {/* Desktop */}
-            <div id='aboutdesktop' className='flex flex-row w-full h-full flex-1 px-8 lg:px-24 xl:px-32'>
-                <div className='flex-1 flex justify-center items-center pr-8'>
+            <div id='aboutdesktop' className='flex flex-row w-full h-full flex-1 px-8 lg:px-16 xl:px-20 2xl:px-32'>
+                <div className='flex-1 flex justify-center items-center pr-4 md:pr-6 lg:pr-8 xl:pr-12 2xl:pr-16'>
                     <section>
-                        <p className='text-primary text-base lg:text-sm xl:text-base'>Hi, my name is</p>
-                        <h1 className='text-7xl lg:text-5xl xl:text-7xl font-bold text-white pt-4'>
+                        <p className='text-primary text-base md:text-sm lg:text-sm xl:text-sm 2xl:text-base'>Hi, my name is</p>
+                        <h1 className='text-6xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white pt-4'>
                         Sangalabror Pujianto
                         </h1>
-                        <h2 className='text-5xl lg:text-3xl xl:text-5xl font-bold text-primary pt-4'>
+                        <h2 className='text-4xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-primary pt-4'>
                         Fullstack Developer
                         </h2>
                         <br/>
-                        <h3 className='text-white text-base lg:text-sm xl:text-base'>
+                        <h3 className='text-white text-sm md:text-base lg:text-xs xl:text-sm 2xl:text-base max-w-none md:max-w-lg lg:max-w-none xl:max-w-lg 2xl:max-w-none leading-relaxed'>
                             I&apos;m a motivated and versatile Fullstack Developer with a passion for crafting robust, scalable software solutions. My journey into technology began early, fueling my pursuit of a Computer Science degree and driving my eagerness to explore new tech stacks continuously. I&apos;m proficient in <span className="text-primary">JavaScript/TypeScript, ReactJS, Next.js, Express.js, Prisma, and MySQL</span> for web, and I thrive when transforming complex requirements into seamless, user-centric applications. With hands-on experience bridging technical execution with business objectives, especially in systems integrating SAP and ERP solutions, I bring both analytical insight and practical expertise to every project. Beyond coding, I excel in critical thinking, clear communication, and effective collaboration with both technical and non-technical stakeholders. Always curious and ready to adapt, I&apos;m excited to embrace new challenges and contribute meaningfully in dynamic environments
                         </h3>
                     </section>
                 </div>
-                <div id="selector" className="flex-1 flex justify-center items-center pl-8">
-                    <div className="flex flex-col font-bold text-primary text-5xl lg:text-3xl xl:text-5xl gap-5 lg:gap-3 xl:gap-5 ml-32 lg:ml-8 xl:ml-16">
+                <div id="selector" className="flex-1 flex justify-center items-center pl-4 md:pl-6 lg:pl-8 xl:pl-12 2xl:pl-16">
+                    <div className="flex flex-col font-bold text-primary text-4xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl gap-4 md:gap-3 lg:gap-3 xl:gap-4 2xl:gap-5 ml-16 md:ml-8 lg:ml-8 xl:ml-12 2xl:ml-16 debug-2xl">
                         <div>
                             <Link href='/education' className="group inline-block transition duration-300">
                                 Certification & Education

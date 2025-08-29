@@ -11,7 +11,7 @@ export default function Navbar() {
                         </h1>
                     </Link>
                 </div>
-                <div className="flex-none flex flex-row items-center gap-5 pr-6">
+                <div className="flex-none flex flex-row items-center gap-3 pr-6">
                     <Link href="/links">
                         <button className="btn bg-black text-white hover:bg-primary">
                             Links
