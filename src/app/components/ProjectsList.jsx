@@ -17,7 +17,7 @@ export default function ProjectsList() {
             route: '/tpmsmodena',
             link: 'https://tpms.modena.com',
             link_name: 'tpms.modena.com',
-            description: 'Responsible for the fullstack development of an agile sprint planner web application, similar to JIRA, for project management. Key features include; Sprint Milestones: Users can add tasks with effort measured in story points and manage tasks through drag-and-drop functionality, transitioning tasks from “In Progress” to “Ready to Test,” “Defect,” and “Done. Timesheet Management: Users can input the number of hours spent on tasks to record progress accurately. QA Integration: Allows testers to add test cases to each task. Developers can view task-specific bugs/defects and detailed bug information for efficient resolution.',
+            description: 'Responsible for the fullstack development of an agile sprint planner web application, similar to JIRA, for project management. Key features include; Sprint Milestones: Users can add tasks with effort measured in story points and manage tasks through drag-and-drop functionality, transitioning tasks from "In Progress" to "Ready to Test," "Defect," and "Done. Timesheet Management: Users can input the number of hours spent on tasks to record progress accurately. QA Integration: Allows testers to add test cases to each task. Developers can view task-specific bugs/defects and detailed bug information for efficient resolution.',
             href: '#',
         },
         {
@@ -35,7 +35,7 @@ export default function ProjectsList() {
             route: '/modena',
             link: 'https://modena.com/id_id',
             link_name: 'modena.com',
-            description: 'Responsible for the fullstack development of a number of features and pages of the Modena website, a comprehensive web application designed showcases Modena’s products and services. The website allows users to buy products, book services, and access information about Modena’s products and services.',
+            description: 'Responsible for the fullstack development of a number of features and pages of the Modena website, a comprehensive web application designed showcases Modena\'s products and services. The website allows users to buy products, book services, and access information about Modena\'s products and services.',
         },
         {
             id: 5,

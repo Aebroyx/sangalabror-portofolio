@@ -43,8 +43,43 @@ export const useGSAPAnimations = (refs) => {
                 )
             }
             
-            // Timeline animations are handled within the Timeline component
-            // This ensures proper sequencing with the title
+            // Timeline animations - clean bottom to top entrance
+            if (refs.timelineRef?.current) {
+                const timelineItems = refs.timelineRef.current.querySelectorAll('li')
+                
+                // Animate timeline items from their initial hidden state to final position
+                tl.to(timelineItems, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.3,
+                    ease: "power2.out"
+                })
+            }
+        } else if (refs.projectsListRef?.current) {
+            // Projects page animations
+            if (refs.titleRef?.current) {
+                tl.fromTo(refs.titleRef.current,
+                    { opacity: 0, y: -50 },
+                    { opacity: 1, y: 0, duration: 0.6 }
+                )
+            }
+
+            if (refs.projectsListRef?.current) {
+                // Animate project list items with staggered reveal
+                const projectItems = refs.projectsListRef.current.querySelectorAll('li')
+                tl.fromTo(projectItems,
+                    { opacity: 0, y: 60, scale: 0.95 },
+                    { 
+                        opacity: 1, 
+                        y: 0, 
+                        scale: 1,
+                        duration: 0.7, 
+                        stagger: 0.15,
+                        ease: "power2.out"
+                    }
+                )
+            }
         } else {
             // About page animations (only navigation links)
             // Animate the navigation links with staggered reveal
