@@ -17,3 +17,39 @@
         display: none;
     }
 }
+
+/* Animated metallic effect */
+.metallic-animated {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 0%,
+        #c0c0c0 20%,
+        #e0e0e0 40%,
+        #a0a0a0 60%,
+        #d0d0d0 80%,
+        #f0f0f0 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    /* Fix for text clipping */
+    line-height: 1.4;
+    padding: 0.2em 0;
+    display: inline-block;
+    /* Ensure proper text rendering */
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    /* Continuous left-to-right animation */
+    animation: metallic-flow 1.5s linear infinite;
+}
+
+@keyframes metallic-flow {
+    0% {
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
