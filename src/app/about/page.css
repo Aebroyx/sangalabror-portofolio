@@ -17,3 +17,118 @@
         display: none;
     }
 }
+
+/* Metallic gradient effect for titles */
+.metallic-gradient {
+    background: linear-gradient(
+        45deg,
+        #f0f0f0 0%,
+        #c0c0c0 25%,
+        #e0e0e0 50%,
+        #a0a0a0 75%,
+        #d0d0d0 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: metallic-shine 3s ease-in-out infinite;
+}
+
+@keyframes metallic-shine {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Enhanced metallic effect with more colors */
+.metallic-enhanced {
+    background: linear-gradient(
+        45deg,
+        #ffffff 0%,
+        #e8e8e8 10%,
+        #d0d0d0 20%,
+        #b8b8b8 30%,
+        #a0a0a0 40%,
+        #888888 50%,
+        #707070 60%,
+        #585858 70%,
+        #404040 80%,
+        #282828 90%,
+        #101010 100%
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Animated metallic effect */
+.metallic-animated {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 0%,
+        #c0c0c0 20%,
+        #e0e0e0 40%,
+        #a0a0a0 60%,
+        #d0d0d0 80%,
+        #f0f0f0 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    /* Fix for text clipping */
+    line-height: 1.4;
+    padding: 0.2em 0;
+    display: inline-block;
+    /* Ensure proper text rendering */
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    /* Continuous left-to-right animation */
+    animation: metallic-flow 1.5s linear infinite;
+}
+
+@keyframes metallic-flow {
+    0% {
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Alternative metallic effect without text clipping */
+.metallic-animated-alt {
+    position: relative;
+    color: #f0f0f0;
+    text-shadow: 
+        0 0 1px #c0c0c0,
+        0 0 2px #a0a0a0,
+        0 0 3px #808080,
+        0 0 4px #606060;
+    animation: metallic-glow 3s ease-in-out infinite;
+}
+
+@keyframes metallic-glow {
+    0%, 100% {
+        text-shadow: 
+            0 0 1px #c0c0c0,
+            0 0 2px #a0a0a0,
+            0 0 3px #808080,
+            0 0 4px #606060;
+    }
+    50% {
+        text-shadow: 
+            0 0 2px #e0e0e0,
+            0 0 4px #c0c0c0,
+            0 0 6px #a0a0a0,
+            0 0 8px #808080;
+    }
+}
