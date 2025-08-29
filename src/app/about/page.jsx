@@ -7,14 +7,10 @@ import { useGSAPAnimations } from '../components/useGSAPAnimations'
 
 export default function About() {
     const aboutRef = useRef(null)
-    const greetingRef = useRef(null)
-    const nameRef = useRef(null)
-    const titleRef = useRef(null)
-    const descRef = useRef(null)
     const linksRef = useRef(null)
 
-    // Use the custom hook for GSAP animations
-    useGSAPAnimations({ aboutRef, greetingRef, nameRef, titleRef, descRef, linksRef })
+    // Use the custom hook for GSAP animations (only navigation links)
+    useGSAPAnimations({ aboutRef, linksRef })
 
     return(
         <>
@@ -23,17 +19,17 @@ export default function About() {
                 <div className='flex flex-col justify-center items-center mx-6'>
                     <section>
                         <div className="mb-12">
-                            <p className='text-primary greeting' ref={greetingRef}>
+                            <p className='text-primary'>
                                 Hi, my name is
                             </p>
-                            <h1 className='text-4xl font-bold text-white pt-4 metallic-animated' ref={nameRef}>
+                            <h1 className='text-4xl font-bold text-white pt-4'>
                                 Sangalabror Pujianto
                             </h1>
-                            <h2 className='text-3xl font-bold text-primary pt-4' ref={titleRef}>
+                            <h2 className='text-3xl font-bold text-primary pt-4'>
                                 Fullstack Developer
                             </h2>
                             <br/>
-                            <h3 className='text-white' ref={descRef}>
+                            <h3 className='text-white'>
                                 <span>I&apos;m a versatile Fullstack Developer skilled in building scalable applications and quickly adapting to diverse tech stacks. My expertise includes integrating complex business systems like SAP and ERP. Strong in analytical thinking and clear communication, I collaborate effectively across teams and thrive in dynamic environments.</span>
                             </h3>
                         </div>
@@ -53,7 +49,7 @@ export default function About() {
                             <div>
                                 <Link href='/projects' className="group transition duration-300 nav-link">
                                     Projects
-                                    <span className="block max-w-0 group-hover:max-w-[200px] transition-all duration-500 h-1 bg-primary"></span>
+                                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-primary"></span>
                                 </Link>
                             </div>
                         </div>
@@ -65,15 +61,15 @@ export default function About() {
             <div id='aboutdesktop' className='flex flex-row w-full h-full flex-1 px-8 lg:px-16 xl:px-20 2xl:px-32' ref={aboutRef}>
                 <div className='flex-1 flex justify-center items-center pr-4 md:pr-6 lg:pr-8 xl:pr-12 2xl:pr-16'>
                     <section>
-                        <p className='text-primary text-base md:text-sm lg:text-sm xl:text-sm 2xl:text-base greeting' ref={greetingRef}>Hi, my name is</p>
-                        <h1 className='text-6xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white pt-4 metallic-animated' ref={nameRef}>
+                        <p className='text-primary text-base md:text-sm lg:text-sm xl:text-sm 2xl:text-base'>Hi, my name is</p>
+                        <h1 className='text-6xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white pt-4 metallic-animated'>
                         Sangalabror Pujianto
                         </h1>
-                        <h2 className='text-4xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-primary pt-4' ref={titleRef}>
+                        <h2 className='text-4xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-primary pt-4'>
                         Fullstack Developer
                         </h2>
                         <br/>
-                        <h3 className='text-white text-sm md:text-base lg:text-xs xl:text-sm 2xl:text-base max-w-none md:max-w-lg lg:max-w-none xl:max-w-lg 2xl:max-w-none leading-relaxed' ref={descRef}>
+                        <h3 className='text-white text-sm md:text-base lg:text-xs xl:text-sm 2xl:text-base max-w-none md:max-w-lg lg:max-w-none xl:max-w-lg 2xl:max-w-none leading-relaxed'>
                             <span>I&apos;m a motivated and versatile Fullstack Developer with a passion for crafting robust, scalable software solutions. My journey into technology began early, fueling my pursuit of a Computer Science degree and driving my eagerness to explore new tech stacks continuously. I&apos;m proficient in </span><span className="text-primary">JavaScript/TypeScript, ReactJS, Next.js, Express.js, Prisma, and MySQL</span><span> for web, and I thrive when transforming complex requirements into seamless, user-centric applications. With hands-on experience bridging technical execution with business objectives, especially in systems integrating SAP and ERP solutions, I bring both analytical insight and practical expertise to every project. Beyond coding, I excel in critical thinking, clear communication, and effective collaboration with both technical and non-technical stakeholders. Always curious and ready to adapt, I&apos;m excited to embrace new challenges and contribute meaningfully in dynamic environments</span>
                         </h3>
                     </section>

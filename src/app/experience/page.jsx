@@ -1,23 +1,32 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { useGSAPAnimations } from '../components/useGSAPAnimations';
 
 export default function Experience() {
     const [selectedOption, setSelectedOption] = useState(1);
+    
+    // Refs for GSAP animations
+    const titleRef = useRef(null);
+    const accordionRef = useRef(null);
+    const accordionItemsRef = useRef(null);
 
     const handleRadioChange = (event) => {
       setSelectedOption(parseInt(event.target.value, 10));
     };
+
+    // Use the custom hook for GSAP animations
+    useGSAPAnimations({ titleRef, accordionRef, accordionItemsRef });
 
     return(
         <>
             <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full flex-1 px-4 md:px-12 lg:px-24 xl:px-32">
                 <div className="flex-1 flex justify-center items-center">
                     <section className="w-full max-w-4xl">
-                        <h1 className="text-3xl text-white font-bold pb-5 text-center lg:text-left">
+                        <h1 className="text-3xl text-white font-bold pb-5 text-center lg:text-left" ref={titleRef}>
                             Work Experience
                         </h1>
-                        <div className="join join-vertical w-full">
-                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6">
+                        <div className="join join-vertical w-full" ref={accordionRef}>
+                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6" ref={accordionItemsRef}>
                                 <input type="radio" name="my-accordion-4" checked={selectedOption === 1} onChange={handleRadioChange} value={1}/> 
                                 <div className="collapse-title text-xl font-medium text-white">
                                     Modena
@@ -41,7 +50,7 @@ export default function Experience() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6">
+                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6" ref={accordionItemsRef}>
                                 <input type="radio" name="my-accordion-4" checked={selectedOption === 2} onChange={handleRadioChange} value={2}/> 
                                 <div className="collapse-title text-xl font-medium text-white">
                                     Sagara Technology
@@ -65,7 +74,7 @@ export default function Experience() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6">
+                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6" ref={accordionItemsRef}>
                                 <input type="radio" name="my-accordion-4" checked={selectedOption === 3} onChange={handleRadioChange} value={3}/>  
                                 <div className="collapse-title text-xl font-medium text-white">
                                     Autosave
