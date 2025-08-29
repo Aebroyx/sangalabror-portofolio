@@ -26,7 +26,7 @@ export default function Experience() {
                             Work Experience
                         </h1>
                         <div className="join join-vertical w-full" ref={accordionRef}>
-                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6" ref={accordionItemsRef}>
+                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6 opacity-0 translate-y-[100px]" ref={accordionItemsRef}>
                                 <input type="radio" name="my-accordion-4" checked={selectedOption === 1} onChange={handleRadioChange} value={1}/> 
                                 <div className="collapse-title text-xl font-medium text-white">
                                     Modena
@@ -50,7 +50,7 @@ export default function Experience() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6" ref={accordionItemsRef}>
+                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6 opacity-0 translate-y-[100px]" ref={accordionItemsRef}>
                                 <input type="radio" name="my-accordion-4" checked={selectedOption === 2} onChange={handleRadioChange} value={2}/> 
                                 <div className="collapse-title text-xl font-medium text-white">
                                     Sagara Technology
@@ -74,7 +74,7 @@ export default function Experience() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6" ref={accordionItemsRef}>
+                            <div className="collapse collapse-arrow join-item border border-white p-4 lg:p-6 opacity-0 translate-y-[100px]" ref={accordionItemsRef}>
                                 <input type="radio" name="my-accordion-4" checked={selectedOption === 3} onChange={handleRadioChange} value={3}/>  
                                 <div className="collapse-title text-xl font-medium text-white">
                                     Autosave

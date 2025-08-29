@@ -21,10 +21,9 @@ export const useGSAPAnimations = (refs) => {
             }
 
             if (refs.accordionRef?.current) {
-                // Animate accordion items from bottom
+                // Animate accordion items from their initial hidden state to final position
                 const accordionItems = refs.accordionRef.current.querySelectorAll('.collapse')
-                tl.fromTo(accordionItems,
-                    { opacity: 0, y: 100 },
+                tl.to(accordionItems,
                     { 
                         opacity: 1, 
                         y: 0, 
@@ -66,14 +65,12 @@ export const useGSAPAnimations = (refs) => {
             }
 
             if (refs.projectsListRef?.current) {
-                // Animate project list items with staggered reveal
+                // Animate project list items from their initial hidden state to final position
                 const projectItems = refs.projectsListRef.current.querySelectorAll('li')
-                tl.fromTo(projectItems,
-                    { opacity: 0, y: 60, scale: 0.95 },
+                tl.to(projectItems,
                     { 
                         opacity: 1, 
-                        y: 0, 
-                        scale: 1,
+                        y: 0,
                         duration: 0.7, 
                         stagger: 0.15,
                         ease: "power2.out"

@@ -51,7 +51,7 @@ export default function ProjectsList() {
             <div className="max-h-[36rem] min-h-[36rem] overflow-y-auto overflow-x-hidden w-full max-w-4xl">
                 <ul role="list" className="">
                     {projects.sort((a, b) => b.id - a.id).map((project) => (
-                        <li key={project.id} className="py-4">
+                        <li key={project.id} className="py-4 opacity-0 translate-y-[60px]">
                             <div className="text-center">
                                 <Link href={`/projects/${project.route}`}>
                                     <h1 className="text-3xl text-white font-semibold transition duration-300 ease-in-out transform hover:text-primary hover:scale-110 cursor-pointer">
