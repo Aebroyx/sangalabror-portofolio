@@ -3,60 +3,9 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 
 export default function Timeline() {
-    const timelineRef = useRef(null)
-
-    useEffect(() => {
-        // Create a simple timeline animation
-        const tl = gsap.timeline({ defaults: { ease: "power2.out" } })
-
-        // Animate the timeline items with simple effects
-        if (timelineRef.current) {
-            const items = timelineRef.current.querySelectorAll('li')
-
-            // Initial state - hide everything
-            gsap.set(items, { 
-                opacity: 0, 
-                y: 50
-            })
-
-            // Animate timeline items with simple slide-up effect
-            tl.to(items, {
-                opacity: 1,
-                y: 0,
-                duration: 0.6,
-                stagger: 0.2,
-                ease: "power2.out"
-            })
-
-            // Add simple hover effects
-            items.forEach((item) => {
-                item.addEventListener("mouseenter", () => {
-                    gsap.to(item, {
-                        scale: 1.02,
-                        duration: 0.2,
-                        ease: "power2.out"
-                    })
-                })
-                
-                item.addEventListener("mouseleave", () => {
-                    gsap.to(item, {
-                        scale: 1,
-                        duration: 0.2,
-                        ease: "power2.out"
-                    })
-                })
-            })
-        }
-
-        // Cleanup
-        return () => {
-            if (tl) tl.kill()
-        }
-    }, [])
-
     return(
         <>
-            <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical" ref={timelineRef}>
+            <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                 <li>
                     <div className="timeline-middle">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">

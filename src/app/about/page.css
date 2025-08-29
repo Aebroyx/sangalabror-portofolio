@@ -53,12 +53,3 @@
         background-position: 0% 50%;
     }
 }
-
-/* Simple timeline animations */
-.timeline li {
-    transition: all 0.2s ease;
-}
-
-.timeline li:hover {
-    transform: translateY(-2px);
-}
