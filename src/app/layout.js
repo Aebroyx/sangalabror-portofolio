@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 // Components
 import NavbarWrapper from './components/NavbarWrapper'
 import FooterWrapper from './components/FooterWrapper'
+import DeviceRedirect from './components/DeviceRedirect'
 
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
@@ -119,6 +120,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`flex flex-col min-h-screen ${jakartaSans.className}`}>
+        <DeviceRedirect />
         <NavbarWrapper />
         <main className="flex-1 flex flex-col items-center justify-center w-full">
           {children}
