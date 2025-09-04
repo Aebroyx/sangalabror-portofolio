@@ -4,7 +4,7 @@ export default function Links() {
     const socialLinks = [
         {
             name: "Portfolio Website",
-            url: "https://sangalabror.aebroyx.dev",
+            url: "https://sangalabror.aebroyx.dev/about",
             icon: "🌐",
             color: "hover:bg-primary"
         },
