@@ -14,9 +14,9 @@ export default function Timeline() {
                     </svg>
                     </div>
                     <div className="timeline-start md:text-end mb-10 text-white">
-                    <time className="font-mono italic text-white">2018</time>
-                    <div className="text-lg text-primary">Mentari Intercultural School Bintaro</div>
-                    International Baccalaureate Diploma Program Class of 2018
+                    <time className="font-mono italic text-white">2024</time>
+                    <div className="text-lg text-primary">Purwadhika</div>
+                    Purwadhika Diploma and Certificate for Fullstack Development
                     </div>
                     <hr/>
                 </li>
@@ -45,9 +45,9 @@ export default function Timeline() {
                     </svg>
                     </div>
                     <div className="timeline-start md:text-end mb-10 text-white">
-                    <time className="font-mono italic text-white">2024</time>
-                    <div className="text-lg text-primary">Purwadhika</div>
-                    Purwadhika Diploma and Certificate for Fullstack Development
+                    <time className="font-mono italic text-white">2018</time>
+                    <div className="text-lg text-primary">Mentari Intercultural School Bintaro</div>
+                    International Baccalaureate Diploma Program Class of 2018
                     </div>
                 </li>
             </ul>
