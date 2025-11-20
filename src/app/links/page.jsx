@@ -48,8 +48,8 @@ export default function Links() {
 
     return (
         <>
-            <div className="flex flex-col items-center justify-center w-full h-full flex-1 px-4 md:px-12 lg:px-24 xl:px-32">
-                <div className="flex-grow flex justify-center items-center w-full">
+            <div className="fixed inset-0 w-full h-[100dvh] overflow-y-auto overflow-x-hidden">
+                <div className="min-h-full w-full flex flex-col items-center justify-center py-12 px-4 md:px-12 lg:px-24 xl:px-32">
                     <section className="w-full max-w-md">
                         {/* Profile Section */}
                         <div className="text-center mb-8">

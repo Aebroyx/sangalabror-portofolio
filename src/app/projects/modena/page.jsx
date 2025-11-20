@@ -34,7 +34,7 @@ export default function Modena() {
     };
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-start py-8">
+        <div className="min-h-[100dvh] flex flex-col items-center justify-start py-8">
             <div className="py-12 sm:py-24">
                 <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
                     <div className="flex justify-end mb-6">
