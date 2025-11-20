@@ -119,7 +119,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`flex flex-col min-h-screen ${jakartaSans.className}`}>
+      <body className={`flex flex-col min-h-[100dvh] ${jakartaSans.className}`}>
         <DeviceRedirect />
         <NavbarWrapper />
         <main className="flex-1 flex flex-col items-center justify-center w-full">
