@@ -56,7 +56,7 @@ export default function ProjectsList() {
       ]
     return(
         <>
-            <div className="max-h-[36rem] min-h-[36rem] overflow-y-auto overflow-x-hidden w-full max-w-4xl">
+            <div className="max-h-[36rem] min-h-[36rem] overflow-y-auto overflow-x-hidden w-full max-w-4xl scrollbar-hide">
                 <ul role="list" className="">
                     {projects.sort((a, b) => b.id - a.id).map((project) => (
                         <li key={project.id} className="py-4 opacity-0 translate-y-[60px]">
