@@ -96,41 +96,33 @@ export default function Splitbill() {
                             <h2 className="text-center text-3xl font-semibold text-white">Showcase</h2>
                         </div>
                         <div className="grid grid-cols-1 gap-4 mt-4 lg:grid-cols-6 lg:grid-rows-2">
-                            <div className="flex p-px w-full sm:h-auto lg:col-span-4" onClick={() => handleOnViewImage(Splitbill1)}>
-                                <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem] w-full h-full group">
-                                    <Image src={Splitbill1} alt="Splitbill1" layout="responsive" objectFit="cover" width={300} height={300} />
+                            <div className="flex p-px w-full lg:col-span-4" onClick={() => handleOnViewImage(Splitbill1)}>
+                                <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem] w-full h-64 lg:h-80 group cursor-pointer">
+                                    <Image src={Splitbill1} alt="Splitbill1" layout="fill" objectFit="cover" />
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex p-px lg:col-span-2 sm:h-auto" onClick={() => handleOnViewImage(Splitbill2)}>
-                                <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary lg:rounded-tr-[2rem] w-full h-full group">
-                                    {isXL ? (
-                                        <Image src={Splitbill2} alt="Splitbill2" layout="fill" objectFit="cover" />
-                                    ) : (
-                                        <Image src={Splitbill2} alt="Splitbill2" layout="responsive" objectFit="cover" width={300} height={300} />
-                                    )}
+                            <div className="flex p-px lg:col-span-2" onClick={() => handleOnViewImage(Splitbill2)}>
+                                <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary lg:rounded-tr-[2rem] w-full h-64 lg:h-80 group cursor-pointer">
+                                    <Image src={Splitbill2} alt="Splitbill2" layout="fill" objectFit="cover" />
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex p-px lg:col-span-2 sm:h-auto" onClick={() => handleOnViewImage(Splitbill3)}>
-                                <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary lg:rounded-bl-[2rem] w-full h-full group">
-                                    {isXL ? (
-                                        <Image src={Splitbill3} alt="Splitbill3" layout="fill" objectFit="cover" />
-                                    ) : (
-                                        <Image src={Splitbill3} alt="Splitbill3" layout="responsive" objectFit="cover" width={300} height={300} />
-                                    )}
+                            <div className="flex p-px lg:col-span-2" onClick={() => handleOnViewImage(Splitbill3)}>
+                                <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary lg:rounded-bl-[2rem] w-full h-64 lg:h-80 group cursor-pointer">
+                                    <Image src={Splitbill3} alt="Splitbill3" layout="fill" objectFit="cover" />
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
                                 </div>
                             </div>
                             <div className="flex p-px lg:col-span-4 w-full" onClick={() => handleOnViewImage(Splitbill4)}>
-                                <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary max-lg:rounded-b-[2rem] lg:rounded-br-[2rem] w-full h-full group">
-                                    <Image src={Splitbill4} alt="Splitbill4" layout="responsive" objectFit="cover" width={300} height={300} />
+                                <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary max-lg:rounded-b-[2rem] lg:rounded-br-[2rem] w-full h-64 lg:h-80 group cursor-pointer">
+                                    <Image src={Splitbill4} alt="Splitbill4" layout="fill" objectFit="cover" />
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>

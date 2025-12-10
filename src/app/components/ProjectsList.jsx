@@ -44,6 +44,14 @@ export default function ProjectsList() {
             link: 'https://splitbill.aebroyx.dev',
             link_name: 'splitbill.aebroyx.dev',
             description: 'An AI app to split bills by scanning receipts using an LLM-based OCR.',
+        },
+        {
+            id: 6,
+            name: 'Supply Chain Management Part',
+            route: '/scmp',
+            link: 'https://portal.modena.com/scmp',
+            link_name: 'portal.modena.com/scmp',
+            description: 'A comprehensive supply chain management system for spare parts procurement, featuring intelligent order suggestions, purchase workflow automation, and inventory management.',
         }
       ]
     return(
