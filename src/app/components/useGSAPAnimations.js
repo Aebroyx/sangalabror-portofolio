@@ -120,10 +120,6 @@ export const useGSAPAnimations = (refs) => {
             if (tl) {
                 tl.kill()
             }
-            // Kill floating animation specifically
-            if (refs.nameRef?.current) {
-                gsap.killTweensOf(refs.nameRef.current)
-            }
         }
     }, []) // Empty dependency array ensures this only runs once
 }

@@ -5,28 +5,13 @@ import B2BLogin from '../../../../public/b2blogin.png'
 import B2BPRList from '../../../../public/b2bprlist.png'
 import B2BPOForm from '../../../../public/b2bpoform.png'
 import B2BGRForm from '../../../../public/b2bgrform.png'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ModalViewImage from '@/app/components/ModalViewImage';
 import { ArrowsPointingOutIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 export default function B2BModena() {
-    const [isXL, setIsXL] = useState(false);
     const [open, setOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsXL(window.innerWidth >= 1280);
-        };
-
-        handleResize();
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
     const handleOnViewImage = (imageSrc) => {
         setSelectedImage(imageSrc);
@@ -102,7 +87,7 @@ export default function B2BModena() {
                         <div className="grid grid-cols-1 gap-4 mt-4 lg:grid-cols-6 lg:grid-rows-2">
                             <div className="flex p-px w-full lg:col-span-4" onClick={() => handleOnViewImage(B2BLogin)}>
                                 <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem] w-full h-64 lg:h-80 group cursor-pointer">
-                                    <Image src={B2BLogin} alt="B2B Login" layout="fill" objectFit="cover" />
+                                    <Image src={B2BLogin} alt="B2B Login" fill className="object-cover" />
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
@@ -110,7 +95,7 @@ export default function B2BModena() {
                             </div>
                             <div className="flex p-px lg:col-span-2" onClick={() => handleOnViewImage(B2BPRList)}>
                                 <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary lg:rounded-tr-[2rem] w-full h-64 lg:h-80 group cursor-pointer">
-                                    <Image src={B2BPRList} alt="B2B PR List" layout="fill" objectFit="cover" />
+                                    <Image src={B2BPRList} alt="B2B PR List" fill className="object-cover" />
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
@@ -118,7 +103,7 @@ export default function B2BModena() {
                             </div>
                             <div className="flex p-px lg:col-span-2" onClick={() => handleOnViewImage(B2BPOForm)}>
                                 <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary lg:rounded-bl-[2rem] w-full h-64 lg:h-80 group cursor-pointer">
-                                    <Image src={B2BPOForm} alt="B2B PO Form" layout="fill" objectFit="cover" />
+                                    <Image src={B2BPOForm} alt="B2B PO Form" fill className="object-cover" />
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
@@ -126,7 +111,7 @@ export default function B2BModena() {
                             </div>
                             <div className="flex p-px lg:col-span-4 w-full" onClick={() => handleOnViewImage(B2BGRForm)}>
                                 <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary max-lg:rounded-b-[2rem] lg:rounded-br-[2rem] w-full h-64 lg:h-80 group cursor-pointer">
-                                    <Image src={B2BGRForm} alt="B2B GR Form" layout="fill" objectFit="cover" />
+                                    <Image src={B2BGRForm} alt="B2B GR Form" fill className="object-cover" />
                                     <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
                                         <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>

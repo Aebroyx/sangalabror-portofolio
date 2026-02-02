@@ -14,16 +14,16 @@
     "@heroicons/react": "^2.1.5",
     "@vercel/speed-insights": "^1.2.0",
     "gsap": "^3.13.0",
-    "next": "14.0.3",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "16.1.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "react-icons": "^4.12.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
     "daisyui": "^4.4.4",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
     "postcss": "^8",
     "tailwindcss": "^3.3.0"
   }
