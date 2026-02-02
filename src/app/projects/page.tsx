@@ -15,8 +15,8 @@ import { useGSAPAnimations } from '../components/useGSAPAnimations'
 
 export default function Projects() {
     // Refs for GSAP animations
-    const titleRef = useRef(null);
-    const projectsListRef = useRef(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const projectsListRef = useRef<HTMLDivElement>(null);
     
     // Use the custom hook for GSAP animations
     useGSAPAnimations({ titleRef, projectsListRef });

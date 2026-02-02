@@ -3,14 +3,14 @@ import React, { useState, useRef } from 'react';
 import { useGSAPAnimations } from '../components/useGSAPAnimations';
 
 export default function Experience() {
-    const [selectedOption, setSelectedOption] = useState(1);
-    
-    // Refs for GSAP animations
-    const titleRef = useRef(null);
-    const accordionRef = useRef(null);
-    const accordionItemsRef = useRef(null);
+    const [selectedOption, setSelectedOption] = useState<number>(1);
 
-    const handleRadioChange = (event) => {
+    // Refs for GSAP animations
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const accordionRef = useRef<HTMLDivElement>(null);
+    const accordionItemsRef = useRef<HTMLDivElement>(null);
+
+    const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
       setSelectedOption(parseInt(event.target.value, 10));
     };
 

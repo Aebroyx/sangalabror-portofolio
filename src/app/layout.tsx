@@ -1,4 +1,5 @@
 import { Plus_Jakarta_Sans } from 'next/font/google'
+import { Metadata } from 'next'
 import './globals.css'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -9,7 +10,7 @@ import DeviceRedirect from './components/DeviceRedirect'
 
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL('https://sangalabror.aebroyx.dev'),
   title: {
     default: 'Sangalabror Pujianto - Full Stack Developer & UI/UX Designer',
@@ -77,7 +78,11 @@ export const metadata = {
   category: 'technology',
 }
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: React.ReactNode
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html id='app' lang="en">
       <head>

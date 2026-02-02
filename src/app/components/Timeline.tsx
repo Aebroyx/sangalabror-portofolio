@@ -2,7 +2,7 @@
 import { useRef } from "react"
 
 export default function Timeline() {
-    const timelineRef = useRef(null)
+    const timelineRef = useRef<HTMLUListElement>(null)
 
     return(
         <>

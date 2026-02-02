@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 
 export default function NavbarWrapper() {
   const pathname = usePathname()
-  const showNavbar = pathname !== '/links'
+  const showNavbar: boolean = pathname !== '/links'
 
   if (!showNavbar) {
     return null

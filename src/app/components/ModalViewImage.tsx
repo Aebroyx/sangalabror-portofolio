@@ -1,8 +1,9 @@
 'use client'
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 import Image from 'next/image'
+import { ModalViewImageProps } from '@/types'
 
-export default function ModalViewImage({ open, setOpen, imageSrc }) {
+export default function ModalViewImage({ open, setOpen, imageSrc }: ModalViewImageProps) {
   return (
     <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
       <DialogBackdrop

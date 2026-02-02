@@ -1,7 +1,6 @@
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
-
     return(
         <>
             <footer className="fixed bottom-0 left-0 w-full pb-4 md:pb-8 transition-bottom duration-300">

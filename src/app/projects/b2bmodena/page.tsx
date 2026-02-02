@@ -1,5 +1,5 @@
 "use client"
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import B2BLogin from '../../../../public/b2blogin.png'
 import B2BPRList from '../../../../public/b2bprlist.png'
@@ -10,10 +10,10 @@ import ModalViewImage from '@/app/components/ModalViewImage';
 import { ArrowsPointingOutIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 export default function B2BModena() {
-    const [open, setOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [open, setOpen] = useState<boolean>(false);
+    const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null);
 
-    const handleOnViewImage = (imageSrc) => {
+    const handleOnViewImage = (imageSrc: StaticImageData): void => {
         setSelectedImage(imageSrc);
         setOpen(true);
     }

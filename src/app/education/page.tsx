@@ -5,8 +5,8 @@ import { useGSAPAnimations } from "../components/useGSAPAnimations"
 
 export default function Education() {
     // Refs for GSAP animations
-    const titleRef = useRef(null);
-    const timelineRef = useRef(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const timelineRef = useRef<HTMLDivElement>(null);
 
     // Use the custom hook for GSAP animations
     useGSAPAnimations({ titleRef, timelineRef });

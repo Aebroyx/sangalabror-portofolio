@@ -1,15 +1,16 @@
-import { forwardRef } from 'react'
+import { forwardRef, ForwardedRef } from 'react'
+import { AnimatedTextProps } from '@/types'
 
-const AnimatedText = forwardRef(({ 
-    children, 
-    className = "", 
+const AnimatedText = forwardRef<HTMLDivElement, AnimatedTextProps>(({
+    children,
+    className = "",
     animationType = "fadeIn",
     delay = 0,
     duration = 0.8,
-    ...props 
-}, ref) => {
-    
-    const getAnimationClasses = () => {
+    ...props
+}, ref: ForwardedRef<HTMLDivElement>) => {
+
+    const getAnimationClasses = (): string => {
         switch (animationType) {
             case "fadeIn":
                 return "opacity-0 animate-fade-in"

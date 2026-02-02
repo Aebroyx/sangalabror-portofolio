@@ -1,7 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link'
+import { Project } from '@/types'
 
 export default function ProjectsList() {
-    const projects = [
+    const projects: Project[] = [
         {
             id: 1,
             name: 'Autosave Website',

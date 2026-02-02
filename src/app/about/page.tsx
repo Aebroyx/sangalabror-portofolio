@@ -6,8 +6,8 @@ import { useRef } from "react"
 import { useGSAPAnimations } from '../components/useGSAPAnimations'
 
 export default function About() {
-    const aboutRef = useRef(null)
-    const linksRef = useRef(null)
+    const aboutRef = useRef<HTMLDivElement>(null)
+    const linksRef = useRef<HTMLDivElement>(null)
 
     // Use the custom hook for GSAP animations (only navigation links)
     useGSAPAnimations({ aboutRef, linksRef })

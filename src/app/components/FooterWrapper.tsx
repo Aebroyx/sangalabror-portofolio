@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 export default function FooterWrapper() {
   const pathname = usePathname()
-  const showFooter = pathname !== '/links'
+  const showFooter: boolean = pathname !== '/links'
 
   if (!showFooter) {
     return null

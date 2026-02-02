@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
+import { GSAPAnimationRefs } from '@/types'
 
-export const useGSAPAnimations = (refs) => {
+export const useGSAPAnimations = (refs: GSAPAnimationRefs): void => {
     useEffect(() => {
         // Register TextPlugin
         gsap.registerPlugin(TextPlugin)
@@ -95,7 +96,7 @@ export const useGSAPAnimations = (refs) => {
             }
 
             // Add hover animations for links
-            gsap.utils.toArray(".nav-link").forEach(link => {
+            gsap.utils.toArray<HTMLElement>(".nav-link").forEach((link: HTMLElement) => {
                 link.addEventListener("mouseenter", () => {
                     gsap.to(link, { 
                         scale: 1.05, 
@@ -121,5 +122,5 @@ export const useGSAPAnimations = (refs) => {
                 tl.kill()
             }
         }
-    }, []) // Empty dependency array ensures this only runs once
+    }, [refs]) // Include refs in dependency array
 }

@@ -3,14 +3,14 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
-export default function DeviceRedirect() {
+export default function DeviceRedirect(): null {
   const router = useRouter()
 
   useEffect(() => {
     // Function to detect if device is mobile
-    const isMobile = () => {
+    const isMobile = (): boolean => {
       // Check for mobile user agent
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera
+      const userAgent = navigator.userAgent || navigator.vendor || (window as Window & { opera?: string }).opera || ''
       const mobileRegex = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i
       
       // Check for touch capability (mobile devices typically have touch)

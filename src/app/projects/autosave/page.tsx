@@ -1,5 +1,5 @@
 "use client"
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import autosaveD1 from '../../../../public/autosaveD1.png';
 import autosaveD2 from '../../../../public/autosaveD2.png';
@@ -10,10 +10,10 @@ import ModalViewImage from '@/app/components/ModalViewImage';
 import { ArrowsPointingOutIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 export default function Autosave() {
-    const [open, setOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [open, setOpen] = useState<boolean>(false);
+    const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null);
 
-    const handleOnViewImage = (imageSrc) => {
+    const handleOnViewImage = (imageSrc: StaticImageData): void => {
         setSelectedImage(imageSrc);
         setOpen(true);
     };

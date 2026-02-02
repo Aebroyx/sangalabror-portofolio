@@ -1,7 +1,12 @@
-import Link from "next/link"
+interface SocialLink {
+    name: string
+    url: string
+    icon: string
+    color: string
+}
 
 export default function Links() {
-    const socialLinks = [
+    const socialLinks: SocialLink[] = [
         {
             name: "Portfolio Website",
             url: "https://sangalabror.aebroyx.dev/about",
