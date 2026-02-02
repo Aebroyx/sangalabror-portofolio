@@ -4,6 +4,9 @@ import Image from 'next/image'
 import { ModalViewImageProps } from '@/types'
 
 export default function ModalViewImage({ open, setOpen, imageSrc }: ModalViewImageProps) {
+  // Determine if imageSrc is a string URL or StaticImageData
+  const isStringUrl = typeof imageSrc === 'string'
+
   return (
     <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
       <DialogBackdrop
@@ -20,7 +23,15 @@ export default function ModalViewImage({ open, setOpen, imageSrc }: ModalViewIma
             <div>
               <div className="mt-3 text-center sm:mt-5">
                 <div className="mt-2 flex justify-center">
-                  {imageSrc && <Image src={imageSrc} alt="Image" width={1200} height={1200} />}
+                  {imageSrc && (
+                    <Image 
+                      src={imageSrc} 
+                      alt="Image" 
+                      width={1200} 
+                      height={1200}
+                      {...(isStringUrl ? { unoptimized: false } : {})}
+                    />
+                  )}
                 </div>
               </div>
             </div>

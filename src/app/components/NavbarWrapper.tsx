@@ -1,8 +1,12 @@
 'use client'
 import { usePathname } from 'next/navigation'
-import Navbar from './Navbar'
+import NavbarClient from './NavbarClient'
 
-export default function NavbarWrapper() {
+interface NavbarWrapperProps {
+  cvUrl?: string
+}
+
+export default function NavbarWrapper({ cvUrl }: NavbarWrapperProps) {
   const pathname = usePathname()
   const showNavbar: boolean = pathname !== '/links'
 
@@ -10,5 +14,5 @@ export default function NavbarWrapper() {
     return null
   }
 
-  return <Navbar />
+  return <NavbarClient cvUrl={cvUrl} />
 }

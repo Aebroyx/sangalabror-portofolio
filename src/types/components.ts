@@ -15,7 +15,7 @@ export interface AnimatedTextProps {
 export interface ModalViewImageProps {
   open: boolean
   setOpen: (open: boolean) => void
-  imageSrc: StaticImageData | null
+  imageSrc: StaticImageData | string | null
 }
 
 export interface GSAPAnimationRefs {
