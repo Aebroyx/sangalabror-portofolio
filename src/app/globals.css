@@ -21,3 +21,10 @@
 
   background-color: #262626;
 }
+
+/* Hide footer description on low-resolution screens and when zoomed */
+@media (max-height: 700px) {
+  .footer-description {
+    display: none !important;
+  }
+}

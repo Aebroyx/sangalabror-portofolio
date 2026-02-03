@@ -1,14 +1,16 @@
-@media (min-width: 768px) {
+/* Show desktop only on larger screens with sufficient height */
+@media (min-width: 1024px) and (min-height: 600px) {
     #aboutmobile {
         display: none;
     }
 }
 
-@media (max-width: 768px) {
+/* Show mobile on small screens OR when zoomed (short height) */
+@media (max-width: 1023px), (max-height: 599px) {
     #selector {
         display: none;
     }
-    
+
     #aboutdesktop {
         display: none;
     }
