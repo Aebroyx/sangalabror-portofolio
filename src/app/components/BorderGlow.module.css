@@ -1,0 +1,51 @@
+.borderTop {
+  background: radial-gradient(
+    ellipse 200px 100% at var(--cursor-x, 50%) 0%,
+    rgba(138, 115, 249, 1) 0%,
+    rgba(138, 115, 249, 0.9) 20%,
+    rgba(180, 165, 250, 0.7) 40%,
+    rgba(240, 240, 250, 0.4) 70%,
+    transparent 100%
+  );
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+.borderRight {
+  background: radial-gradient(
+    ellipse 100% 200px at 100% var(--cursor-y, 50%),
+    rgba(138, 115, 249, 1) 0%,
+    rgba(138, 115, 249, 0.9) 20%,
+    rgba(180, 165, 250, 0.7) 40%,
+    rgba(240, 240, 250, 0.4) 70%,
+    transparent 100%
+  );
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+.borderBottom {
+  background: radial-gradient(
+    ellipse 200px 100% at var(--cursor-x, 50%) 100%,
+    rgba(138, 115, 249, 1) 0%,
+    rgba(138, 115, 249, 0.9) 20%,
+    rgba(180, 165, 250, 0.7) 40%,
+    rgba(240, 240, 250, 0.4) 70%,
+    transparent 100%
+  );
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+.borderLeft {
+  background: radial-gradient(
+    ellipse 100% 200px at 0% var(--cursor-y, 50%),
+    rgba(138, 115, 249, 1) 0%,
+    rgba(138, 115, 249, 0.9) 20%,
+    rgba(180, 165, 250, 0.7) 40%,
+    rgba(240, 240, 250, 0.4) 70%,
+    transparent 100%
+  );
+  will-change: opacity;
+  transform: translateZ(0);
+}

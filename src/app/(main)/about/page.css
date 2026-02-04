@@ -64,3 +64,28 @@
 .timeline li:hover {
     transform: translateY(-2px);
 }
+
+/* Gradient text slide effect for navigation links */
+.nav-link {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        #8A73F9 0%,
+        #9F8BFA 25%,
+        #B4A3FB 50%,
+        #9F8BFA 75%,
+        #8A73F9 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 0.6s ease;
+}
+
+.nav-link:hover {
+    background-position: 100% 50%;
+}

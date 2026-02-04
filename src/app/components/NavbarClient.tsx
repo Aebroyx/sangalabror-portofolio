@@ -1,6 +1,8 @@
 'use client'
 
 import Link from 'next/link'
+import { LinkIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline'
+import NavButton from './NavButton'
 
 interface NavbarClientProps {
   cvUrl?: string
@@ -17,23 +19,19 @@ export default function NavbarClient({ cvUrl }: NavbarClientProps) {
             </h1>
           </Link>
         </div>
-        <div className="flex-none flex flex-row items-center gap-3 pr-6">
-          <Link href="/links">
-            <button className="btn bg-black text-white hover:bg-primary">
-              Links
-            </button>
-          </Link>
-          {cvUrl ? (
-            <a href={cvUrl} target="_blank" rel="noopener noreferrer">
-              <button className="btn bg-black text-white hover:bg-primary">
-                Resume
-              </button>
-            </a>
-          ) : (
-            <button className="btn bg-black text-white opacity-50 cursor-not-allowed" disabled>
-              Resume
-            </button>
-          )}
+        <div className="flex-none flex flex-row items-center gap-2 sm:gap-3 pr-4 sm:pr-6">
+          <NavButton
+            href="/links"
+            label="Links"
+            icon={<LinkIcon className="w-4 h-4" />}
+          />
+          <NavButton
+            href={cvUrl}
+            label="Resume"
+            icon={<ArrowDownTrayIcon className="w-4 h-4" />}
+            external
+            disabled={!cvUrl}
+          />
         </div>
       </nav>
     </>

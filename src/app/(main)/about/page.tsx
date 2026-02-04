@@ -25,7 +25,7 @@ export default function About() {
                             <h1 className='text-4xl font-bold text-white pt-4'>
                                 Sangalabror Pujianto
                             </h1>
-                            <h2 className='text-3xl font-bold text-primary pt-4'>
+                            <h2 className='text-3xl font-bold pt-4 bg-gradient-to-r from-primary to-white bg-clip-text text-transparent'>
                                 Fullstack Developer
                             </h2>
                             <br/>
@@ -65,7 +65,7 @@ export default function About() {
                         <h1 className='text-6xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white pt-4 metallic-animated'>
                         Sangalabror Pujianto
                         </h1>
-                        <h2 className='text-4xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-primary pt-4'>
+                        <h2 className='text-4xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold pt-4 bg-gradient-to-r from-primary from-50% to-white bg-clip-text text-transparent'>
                         Fullstack Developer
                         </h2>
                         <br/>

@@ -27,3 +27,19 @@ export interface GSAPAnimationRefs {
   aboutRef?: RefObject<HTMLDivElement | null>
   accordionItemsRef?: RefObject<HTMLDivElement | null>
 }
+
+export interface BorderIntensity {
+  top: number
+  right: number
+  bottom: number
+  left: number
+}
+
+export interface CursorPosition {
+  x: number
+  y: number
+}
+
+export interface BorderGlowProps {
+  children: React.ReactNode
+}
