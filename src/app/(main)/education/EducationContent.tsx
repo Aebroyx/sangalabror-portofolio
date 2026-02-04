@@ -23,7 +23,7 @@ export default function EducationContent({ education }: EducationContentProps) {
         <div className="flex-1 flex justify-center items-center">
           <section>
             <h1
-              className="text-3xl text-white font-bold pb-5 text-center lg:text-left"
+              className="text-3xl font-bold pb-5 text-center lg:text-left bg-gradient-to-r from-white to-neutral-600 bg-clip-text text-transparent"
               ref={titleRef}
             >
               Certification & Education

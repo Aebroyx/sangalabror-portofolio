@@ -20,7 +20,7 @@ export default function ProjectsListClient({ projects }: ProjectsListClientProps
             >
               <div className="text-center">
                 <Link href={`/projects/${project.slug}`}>
-                  <h1 className="text-3xl text-white font-semibold transition duration-300 ease-in-out transform hover:text-primary hover:scale-110 cursor-pointer">
+                  <h1 className="text-3xl font-semibold transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer bg-gradient-to-r from-white from-85% to-neutral-600 bg-clip-text text-transparent">
                     {project.title}
                   </h1>
                 </Link>

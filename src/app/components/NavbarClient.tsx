@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import NavButton from './NavButton'
 
 interface NavbarClientProps {
   cvUrl?: string
@@ -18,22 +19,8 @@ export default function NavbarClient({ cvUrl }: NavbarClientProps) {
           </Link>
         </div>
         <div className="flex-none flex flex-row items-center gap-3 pr-6">
-          <Link href="/links">
-            <button className="btn bg-black text-white hover:bg-primary">
-              Links
-            </button>
-          </Link>
-          {cvUrl ? (
-            <a href={cvUrl} target="_blank" rel="noopener noreferrer">
-              <button className="btn bg-black text-white hover:bg-primary">
-                Resume
-              </button>
-            </a>
-          ) : (
-            <button className="btn bg-black text-white opacity-50 cursor-not-allowed" disabled>
-              Resume
-            </button>
-          )}
+          <NavButton href="/links" label="Links" />
+          <NavButton href={cvUrl} label="Resume" external disabled={!cvUrl} />
         </div>
       </nav>
     </>
