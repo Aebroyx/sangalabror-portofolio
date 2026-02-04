@@ -18,7 +18,7 @@ export default function NavbarClient({ cvUrl }: NavbarClientProps) {
             </h1>
           </Link>
         </div>
-        <div className="flex-none flex flex-row items-center gap-3 pr-6">
+        <div className="flex-none flex flex-row items-center gap-2 sm:gap-3 pr-4 sm:pr-6">
           <NavButton href="/links" label="Links" />
           <NavButton href={cvUrl} label="Resume" external disabled={!cvUrl} />
         </div>

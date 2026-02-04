@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import NavbarWrapper from '@/app/components/NavbarWrapper'
 import FooterWrapper from '@/app/components/FooterWrapper'
 import DeviceRedirect from '@/app/components/DeviceRedirect'
+import BorderGlow from '@/app/components/BorderGlow'
 import { getSiteSettings } from '@/sanity/lib/fetch'
 
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
@@ -128,13 +129,15 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         />
       </head>
       <body className={`flex flex-col min-h-[100dvh] ${jakartaSans.className}`}>
-        <DeviceRedirect />
-        <NavbarWrapper cvUrl={siteSettings?.cvUrl} />
-        <main className="flex-1 flex flex-col items-center justify-center w-full">
-          {children}
-        </main>
-        <FooterWrapper />
-        <SpeedInsights />
+        <BorderGlow>
+          <DeviceRedirect />
+          <NavbarWrapper cvUrl={siteSettings?.cvUrl} />
+          <main className="flex-1 flex flex-col items-center justify-center w-full">
+            {children}
+          </main>
+          <FooterWrapper />
+          <SpeedInsights />
+        </BorderGlow>
       </body>
     </html>
   )
