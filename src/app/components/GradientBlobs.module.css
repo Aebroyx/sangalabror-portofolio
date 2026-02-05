@@ -1,0 +1,67 @@
+.blobContainer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  pointer-events: none;
+  mix-blend-mode: lighten;
+}
+
+.blob1 {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(
+    circle,
+    rgba(138, 115, 249, 0.35) 0%,
+    transparent 40%
+  );
+}
+
+.blob2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(
+    circle,
+    rgba(120, 100, 240, 0.32) 0%,
+    transparent 40%
+  );
+}
+
+.blob3 {
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(150, 130, 255, 0.34) 0%,
+    transparent 40%
+  );
+}
+
+.blob4 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(138, 115, 249, 0.3) 0%,
+    transparent 40%
+  );
+}
+
+.blob5 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(130, 110, 245, 0.33) 0%,
+    transparent 40%
+  );
+}

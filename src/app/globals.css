@@ -13,13 +13,24 @@
 }
 
 #app {
-  background-image: url('./../../public/background.png');
+  position: relative;
+  background-color: #262626;
+}
+
+/* Blurred background layer */
+#app::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./../../public/backgorund-noblur.svg');
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-
-  background-color: #262626;
+  filter: blur(75px);
+  z-index: -2;
 }
 
 /* Hide footer description on low-resolution screens and when zoomed */

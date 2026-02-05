@@ -1,4 +1,4 @@
-# 🚀 Sangalabror Pujianto - Portfolio Website v2.0
+# 🚀 Sangalabror Pujianto - Portfolio Website v2.1
 
 A modern, responsive portfolio website built with cutting-edge web technologies and powered by a headless CMS for seamless content management.
 
@@ -16,6 +16,8 @@ A modern, responsive portfolio website built with cutting-edge web technologies 
 - **SEO Friendly** - Built-in SEO optimization with Next.js metadata
 - **TypeScript** - Full type safety throughout the codebase
 - **Auto-Revalidation** - Webhook-based content updates in real-time
+- **Animated Gradient Blobs** - GSAP-animated purple gradient blobs that move across the background
+- **Cursor Edge Glow** - Interactive border glow effect that follows cursor position
 
 ## 🛠️ Tech Stack
 
@@ -124,6 +126,10 @@ sangalabror-portofolio/
 │   │   ├── api/
 │   │   │   └── revalidate/    # Webhook endpoint
 │   │   ├── components/        # Reusable components
+│   │   │   ├── BorderGlow.tsx         # Cursor edge glow effect
+│   │   │   ├── GradientBlobs.tsx      # Animated background blobs
+│   │   │   ├── useGradientBlobs.ts    # GSAP animation hook for blobs
+│   │   │   └── ...
 │   │   ├── globals.css        # Global styles
 │   │   └── layout.tsx         # Root layout
 │   ├── sanity/
@@ -294,7 +300,15 @@ While this is a personal portfolio, suggestions and feedback are welcome:
 
 ## 📝 Version History
 
-### v2.0.0 (Current)
+### v2.2.0
+- ✨ Added animated gradient blobs background with GSAP animations
+
+### v2.1.0
+- ✨ Added cursor-following edge glow effect (BorderGlow component)
+- ✨ Enhanced visual effects with gradient text styling
+- ✨ Improved navbar button interactions with icon support
+
+### v2.0.0
 - ✨ Migrated to TypeScript
 - ✨ Upgraded to Next.js 16
 - ✨ Integrated Sanity.io headless CMS
