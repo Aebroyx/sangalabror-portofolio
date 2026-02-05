@@ -1,7 +1,7 @@
 import { useEffect, RefObject } from 'react'
 import { gsap } from 'gsap'
 
-export const useGradientBlobs = (blobRefs: RefObject<HTMLDivElement>[]) => {
+export const useGradientBlobs = (blobRefs: RefObject<HTMLDivElement | null>[]) => {
   useEffect(() => {
     const timelines: gsap.core.Timeline[] = []
 
