@@ -97,22 +97,22 @@ export default function BorderGlow({ children }: BorderGlowProps) {
     <>
       <div
         ref={topBorderRef}
-        className={`fixed top-0 left-0 right-0 h-[4px] pointer-events-none ${styles.borderTop}`}
+        className={`fixed top-0 left-0 right-0 h-[2px] pointer-events-none ${styles.borderTop}`}
         style={{ zIndex: 9999, opacity: 0.5 }}
       />
       <div
         ref={rightBorderRef}
-        className={`fixed top-0 right-0 bottom-0 w-[4px] pointer-events-none ${styles.borderRight}`}
+        className={`fixed top-0 right-0 bottom-0 w-[2px] pointer-events-none ${styles.borderRight}`}
         style={{ zIndex: 9999, opacity: 0.5 }}
       />
       <div
         ref={bottomBorderRef}
-        className={`fixed bottom-0 left-0 right-0 h-[4px] pointer-events-none ${styles.borderBottom}`}
+        className={`fixed bottom-0 left-0 right-0 h-[2px] pointer-events-none ${styles.borderBottom}`}
         style={{ zIndex: 9999, opacity: 0.5 }}
       />
       <div
         ref={leftBorderRef}
-        className={`fixed top-0 left-0 bottom-0 w-[4px] pointer-events-none ${styles.borderLeft}`}
+        className={`fixed top-0 left-0 bottom-0 w-[2px] pointer-events-none ${styles.borderLeft}`}
         style={{ zIndex: 9999, opacity: 0.5 }}
       />
       {children}
