@@ -7,7 +7,6 @@
     transparent 100%
   );
   box-shadow: 0 0 80px rgba(138, 115, 249, 0.8);
-  filter: blur(1px);
   will-change: opacity;
   transform: translateZ(0);
 }
@@ -21,7 +20,6 @@
     transparent 100%
   );
   box-shadow: 0 0 80px rgba(138, 115, 249, 0.8);
-  filter: blur(1px);
   will-change: opacity;
   transform: translateZ(0);
 }
@@ -35,7 +33,6 @@
     transparent 100%
   );
   box-shadow: 0 0 80px rgba(138, 115, 249, 0.8);
-  filter: blur(1px);
   will-change: opacity;
   transform: translateZ(0);
 }
@@ -49,7 +46,6 @@
     transparent 100%
   );
   box-shadow: 0 0 80px rgba(138, 115, 249, 0.8);
-  filter: blur(1px);
   will-change: opacity;
   transform: translateZ(0);
 }
