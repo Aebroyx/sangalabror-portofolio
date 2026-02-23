@@ -89,6 +89,11 @@ export interface SiteSettings {
   _id: string
   title: string
   cvUrl: string
+  aboutGreeting?: string
+  aboutFullName?: string
+  aboutTagline?: string
+  aboutBio?: PortableTextBlock[]
+  aboutBioShort?: string
 }
 
 // ============== SITEMAP TYPES ==============

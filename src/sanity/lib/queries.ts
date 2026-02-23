@@ -79,7 +79,12 @@ export const siteSettingsQuery = groq`
   *[_type == "siteSettings"][0] {
     _id,
     title,
-    "cvUrl": cvFile.asset->url
+    "cvUrl": cvFile.asset->url,
+    aboutGreeting,
+    aboutFullName,
+    aboutTagline,
+    aboutBio,
+    aboutBioShort
   }
 `
 
