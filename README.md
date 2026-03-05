@@ -1,4 +1,4 @@
-# 🚀 Sangalabror Pujianto - Portfolio Website v2.1
+# 🚀 Sangalabror Pujianto - Portfolio Website v2.3
 
 A modern, responsive portfolio website built with cutting-edge web technologies and powered by a headless CMS for seamless content management.
 
