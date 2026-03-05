@@ -6,7 +6,9 @@ const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 import About from './about/page'
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: {
+    absolute: 'Sangalabror Pujianto Portfolio',
+  },
   description: 'Welcome to Sangalabror Pujianto\'s portfolio. Full Stack Developer and UI/UX Designer passionate about creating innovative digital solutions.',
   openGraph: {
     title: 'Sangalabror Pujianto - Portfolio Home',
