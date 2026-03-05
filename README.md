@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with cutting-edge web technologies and powered by a headless CMS for seamless content management.
 
-![Portfolio Preview](public/desktop.png)
+![Sangalabror Personal Logo](public/dp-splogo-transparent.png)
 
 ## ✨ Features
 
