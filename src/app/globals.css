@@ -33,6 +33,34 @@
   z-index: -2;
 }
 
+.logo-svg {
+  display: inline-flex;
+  transition: filter 300ms ease-in-out;
+}
+
+.logo-svg:hover {
+  filter: drop-shadow(0 0 12px rgba(204, 186, 228, 0.6))
+         drop-shadow(0 0 30px rgba(138, 115, 249, 0.35));
+}
+
+.logo-layer-gradient {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.logo-svg:hover .logo-layer-gradient {
+  opacity: 0;
+}
+
+.logo-layer-dark {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.logo-svg:hover .logo-layer-dark {
+  opacity: 1;
+}
+
 /* Hide footer description on low-resolution screens and when zoomed */
 @media (max-height: 700px) {
   .footer-description {
