@@ -16,7 +16,7 @@ const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://sangalabror.aebroyx.dev'),
   title: {
-    default: 'Sangalabror Pujianto - Full Stack Developer & UI/UX Designer',
+    default: 'Sangalabror Pujianto - Full Stack Developer',
     template: '%s | Sangalabror Pujianto'
   },
   description: 'Portfolio of Sangalabror Pujianto, a passionate Full Stack Developer and UI/UX Designer specializing in modern web applications, mobile apps, and innovative digital solutions.',

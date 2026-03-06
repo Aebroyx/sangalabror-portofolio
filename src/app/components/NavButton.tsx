@@ -66,14 +66,18 @@ export default function NavButton({ href, label, external = false, disabled = fa
   }, [disabled, label])
 
   const buttonClass = disabled
-    ? `btn bg-gradient-to-l from-neutral-800 to-black text-white opacity-50 cursor-not-allowed border border-neutral-800 sm:min-w-[124px]`
-    : `btn bg-gradient-to-l from-neutral-800 to-black text-white hover:bg-primary border border-neutral-700 hover:border-primary transition-all duration-200 sm:min-w-[124px]`
+    ? `btn nav-btn bg-gradient-to-l from-neutral-800 to-black text-white opacity-50 cursor-not-allowed border border-neutral-800 sm:min-w-[124px]`
+    : `btn nav-btn bg-gradient-to-l from-neutral-800 to-black text-white border border-neutral-700 sm:min-w-[124px]`
 
   const buttonContent = (
     <button ref={buttonRef} className={buttonClass} disabled={disabled}>
       <span className="flex items-center gap-2">
-        {icon && <span ref={iconRef} className="inline-block">{icon}</span>}
-        <span>{label}</span>
+        {icon && (
+          <span ref={iconRef} className="inline-block nav-btn-icon transition-colors duration-200">
+            {icon}
+          </span>
+        )}
+        <span className="nav-btn-text transition-all duration-200">{label}</span>
       </span>
     </button>
   )
@@ -84,14 +88,14 @@ export default function NavButton({ href, label, external = false, disabled = fa
 
   if (external) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer">
+      <a href={href} className="nav-btn-link block" target="_blank" rel="noopener noreferrer">
         {buttonContent}
       </a>
     )
   }
 
   return (
-    <Link href={href}>
+    <Link href={href} className="nav-btn-link block">
       {buttonContent}
     </Link>
   )
