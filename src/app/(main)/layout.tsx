@@ -16,12 +16,13 @@ const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://sangalabror.aebroyx.dev'),
   title: {
-    default: 'Sangalabror Pujianto - Full Stack Developer',
+    default: 'Sangalabror Pujianto - Software Engineer',
     template: '%s | Sangalabror Pujianto'
   },
   description: 'Portfolio of Sangalabror Pujianto, a passionate Full Stack Developer and UI/UX Designer specializing in modern web applications, mobile apps, and innovative digital solutions.',
   keywords: [
     'Sangalabror Pujianto',
+    'Software Engineer',
     'Full Stack Developer',
     'UI/UX Designer',
     'Web Developer',
@@ -45,20 +46,20 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://sangalabror.aebroyx.dev',
     siteName: 'Sangalabror Pujianto Portfolio',
-    title: 'Sangalabror Pujianto - Full Stack Developer & UI/UX Designer',
+    title: 'Sangalabror Pujianto - Software Engineer',
     description: 'Portfolio of Sangalabror Pujianto, a passionate Full Stack Developer and UI/UX Designer specializing in modern web applications, mobile apps, and innovative digital solutions.',
     images: [
       {
         url: '/portrait.png',
         width: 1200,
         height: 630,
-        alt: 'Sangalabror Pujianto - Full Stack Developer & UI/UX Designer',
+        alt: 'Sangalabror Pujianto - Software Engineer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sangalabror Pujianto - Full Stack Developer & UI/UX Designer',
+    title: 'Sangalabror Pujianto - Software Engineer',
     description: 'Portfolio of Sangalabror Pujianto, a passionate Full Stack Developer and UI/UX Designer specializing in modern web applications, mobile apps, and innovative digital solutions.',
     images: ['/portrait.png'],
     creator: '@sangalabror',
@@ -107,7 +108,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Sangalabror Pujianto",
-              "jobTitle": "Full Stack Developer & UI/UX Designer",
+              "jobTitle": "Software Engineer",
               "description": "Passionate Full Stack Developer and UI/UX Designer specializing in modern web applications, mobile apps, and innovative digital solutions.",
               "url": "https://sangalabror.aebroyx.dev",
               "image": "https://sangalabror.aebroyx.dev/portrait.png",

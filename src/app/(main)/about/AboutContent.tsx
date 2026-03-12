@@ -85,11 +85,10 @@ export function AboutContent({
             <div className="mb-12">
               <p className='text-primary'>{g}</p>
               <h1 className='text-4xl font-bold text-white pt-4'>{name}</h1>
-              <h2 className='text-3xl font-bold pt-4 bg-gradient-to-r from-primary to-white bg-clip-text text-transparent'>
+              <h2 className='text-3xl font-bold pt-4 leading-[1.15] pb-[0.12em] bg-gradient-to-r from-primary to-white bg-clip-text text-transparent'>
                 {t}
               </h2>
-              <br/>
-              <div className='text-white'>
+              <div className='text-white mt-4'>
                 <span>{mobileBio}</span>
               </div>
             </div>
@@ -125,11 +124,10 @@ export function AboutContent({
             <h1 className='text-6xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white pt-4 metallic-animated'>
               {name}
             </h1>
-            <h2 className='text-4xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold pt-4 bg-gradient-to-r from-primary from-50% to-white bg-clip-text text-transparent'>
+            <h2 className='text-4xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold pt-4 leading-[1.15] pb-[0.12em] bg-gradient-to-r from-primary from-50% to-white bg-clip-text text-transparent'>
               {t}
             </h2>
-            <br/>
-            <div className='text-white text-sm md:text-base lg:text-xs xl:text-sm 2xl:text-base max-w-none md:max-w-lg lg:max-w-none xl:max-w-lg 2xl:max-w-none leading-relaxed'>
+            <div className='text-white mt-4 text-sm md:text-base lg:text-xs xl:text-sm 2xl:text-base max-w-none md:max-w-lg lg:max-w-none xl:max-w-lg 2xl:max-w-none leading-relaxed'>
               <PortableText
                 value={bioBlocks}
                 components={{ marks: primaryMarkComponent }}
