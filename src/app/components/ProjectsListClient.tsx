@@ -10,8 +10,17 @@ interface ProjectsListClientProps {
 export default function ProjectsListClient({ projects }: ProjectsListClientProps) {
   return (
     <>
-      <div className="max-h-[36rem] min-h-[36rem] overflow-y-auto overflow-x-hidden w-full max-w-4xl scrollbar-hide">
-        <ul role="list" className="">
+      <div
+        className="max-h-[36rem] min-h-[36rem] overflow-y-auto overflow-x-hidden w-full max-w-4xl scrollbar-hide"
+        style={{
+          // Fade only at the very edges; full opacity in the middle band so row 1 is not stuck in a dim ramp
+          maskImage:
+            'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 20px, black 72px, black calc(100% - 72px), rgba(0,0,0,0.2) calc(100% - 20px), transparent 100%)',
+          WebkitMaskImage:
+            'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 20px, black 72px, black calc(100% - 72px), rgba(0,0,0,0.2) calc(100% - 20px), transparent 100%)',
+        }}
+      >
+        <ul role="list" className="pt-20 pb-20">
           {projects.map((project) => (
             <li 
               key={project._id} 
