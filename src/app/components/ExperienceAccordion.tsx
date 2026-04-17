@@ -40,7 +40,16 @@ export default function ExperienceAccordion({ experiences }: ExperienceAccordion
           >
             Work Experience
           </h1>
-          <div className="join join-vertical w-full" ref={accordionRef}>
+          <div
+            className="w-full max-h-[calc(100dvh-14rem)] md:max-h-[calc(100dvh-16rem)] lg:max-h-[calc(100dvh-18rem)] overflow-y-auto overflow-x-hidden scrollbar-hide"
+            style={{
+              maskImage:
+                'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 20px, black 72px, black calc(100% - 72px), rgba(0,0,0,0.2) calc(100% - 20px), transparent 100%)',
+              WebkitMaskImage:
+                'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 20px, black 72px, black calc(100% - 72px), rgba(0,0,0,0.2) calc(100% - 20px), transparent 100%)',
+            }}
+          >
+            <div className="join join-vertical w-full pt-20 pb-20" ref={accordionRef}>
             {experiences.map((exp, index) => (
               <div
                 key={exp._id}
@@ -84,6 +93,7 @@ export default function ExperienceAccordion({ experiences }: ExperienceAccordion
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </section>
       </div>
