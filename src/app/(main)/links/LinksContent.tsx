@@ -76,26 +76,24 @@ export default function LinksContent({ cvUrl }: LinksContentProps) {
                     className="h-20 w-auto"
                   >
                     <defs>
-                      <pattern
-                        id="logo-gradient"
-                        patternUnits="objectBoundingBox"
-                        width="1"
-                        height="1"
-                      >
-                        <image
-                          href={GRADIENT_IMG}
-                          width="512"
-                          height="293"
-                          preserveAspectRatio="xMidYMid slice"
-                        />
-                      </pattern>
+                      <mask id="links-logo-gradient-mask" maskUnits="userSpaceOnUse">
+                        <g fill="white">
+                          {LOGO_PATHS.map((d, i) => (
+                            <path key={i} d={d} />
+                          ))}
+                          <polygon points={LOGO_POLYGON} />
+                        </g>
+                      </mask>
                     </defs>
 
                     <g className="logo-layer-gradient">
-                      {LOGO_PATHS.map((d, i) => (
-                        <path key={i} d={d} fill="url(#logo-gradient)" />
-                      ))}
-                      <polygon points={LOGO_POLYGON} fill="url(#logo-gradient)" />
+                      <image
+                        href={GRADIENT_IMG}
+                        width="512"
+                        height="292.57"
+                        preserveAspectRatio="none"
+                        mask="url(#links-logo-gradient-mask)"
+                      />
                     </g>
 
                     <g className="logo-layer-dark">
