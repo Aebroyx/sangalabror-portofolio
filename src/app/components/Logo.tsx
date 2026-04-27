@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useId, useRef } from 'react'
 import Link from 'next/link'
 import gsap from 'gsap'
 
@@ -18,6 +18,7 @@ const GRADIENT_IMG = '/purple-gradient.png'
 
 export default function Logo() {
   const logoRef = useRef<HTMLDivElement | null>(null)
+  const gradientMaskId = `logo-gradient-mask-${useId().replace(/:/g, '')}`
 
   useEffect(() => {
     if (!logoRef.current) return
@@ -49,28 +50,25 @@ export default function Logo() {
           className="h-8 w-auto"
         >
           <defs>
-            <pattern
-              id="logo-gradient"
-              patternUnits="objectBoundingBox"
-              width="1"
-              height="1"
-            >
-              <image
-                href={GRADIENT_IMG}
-                width="512"
-                height="293"
-                preserveAspectRatio="xMidYMid slice"
-              />
-            </pattern>
+            <mask id={gradientMaskId} maskUnits="userSpaceOnUse">
+              <g fill="white">
+                {LOGO_PATHS.map((d, i) => (
+                  <path key={i} d={d} />
+                ))}
+                <polygon points={LOGO_POLYGON} />
+              </g>
+            </mask>
           </defs>
 
           {/* Gradient-filled layer (visible by default) */}
-          <g className="logo-layer-gradient">
-            {LOGO_PATHS.map((d, i) => (
-              <path key={i} d={d} fill="url(#logo-gradient)" />
-            ))}
-            <polygon points={LOGO_POLYGON} fill="url(#logo-gradient)" />
-          </g>
+          <image
+            className="logo-layer-gradient"
+            href={GRADIENT_IMG}
+            width="512"
+            height="292.57"
+            preserveAspectRatio="none"
+            mask={`url(#${gradientMaskId})`}
+          />
 
           {/* Dark-filled layer (visible on hover) */}
           <g className="logo-layer-dark">

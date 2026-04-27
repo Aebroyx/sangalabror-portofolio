@@ -48,6 +48,11 @@
   transition: opacity 300ms ease-in-out;
 }
 
+.logo-layer-dark {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
 .logo-svg:hover .logo-layer-gradient {
   opacity: 0;
 }
