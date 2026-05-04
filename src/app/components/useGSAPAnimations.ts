@@ -38,23 +38,70 @@ export const useGSAPAnimations = (refs: GSAPAnimationRefs): void => {
             // Education page animations
             if (refs.titleRef?.current) {
                 tl.fromTo(refs.titleRef.current,
-                    { opacity: 0, y: -50 },
-                    { opacity: 1, y: 0, duration: 0.6 }
+                    { opacity: 0, y: -30 },
+                    { opacity: 1, y: 0, duration: 0.5 }
                 )
             }
-            
-            // Timeline animations - clean bottom to top entrance
-            if (refs.timelineRef?.current) {
-                const timelineItems = refs.timelineRef.current.querySelectorAll('li')
-                
-                // Animate timeline items from their initial hidden state to final position
-                tl.to(timelineItems, {
+
+            // Timeline animations - animate inner content + connector lines
+            // separately so the spine "draws" itself instead of sitting there.
+            const timelineEl = refs.timelineRef.current
+            const icons = timelineEl.querySelectorAll<HTMLElement>('.timeline-anim-icon')
+            const contents = timelineEl.querySelectorAll<HTMLElement>('.timeline-anim-content')
+            const lines = timelineEl.querySelectorAll<HTMLElement>('.timeline-anim-line')
+
+            // Pin initial state explicitly so GSAP has it cached before tweening.
+            if (icons.length) {
+                gsap.set(icons, {
+                    opacity: 0,
+                    scale: 0.6,
+                    transformOrigin: 'center center',
+                    force3D: true,
+                })
+            }
+            if (contents.length) {
+                gsap.set(contents, { opacity: 0, y: 24, force3D: true })
+            }
+            if (lines.length) {
+                gsap.set(lines, {
+                    opacity: 0,
+                    scaleY: 0,
+                    transformOrigin: 'top center',
+                    force3D: true,
+                })
+            }
+
+            if (icons.length) {
+                tl.to(icons, {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.45,
+                    stagger: 0.12,
+                    ease: 'power3.out',
+                    clearProps: 'willChange',
+                }, '-=0.2')
+            }
+
+            if (lines.length) {
+                tl.to(lines, {
+                    opacity: 1,
+                    scaleY: 1,
+                    duration: 0.4,
+                    stagger: 0.12,
+                    ease: 'power2.out',
+                    clearProps: 'willChange,transform',
+                }, '<+=0.08')
+            }
+
+            if (contents.length) {
+                tl.to(contents, {
                     opacity: 1,
                     y: 0,
-                    duration: 0.8,
-                    stagger: 0.3,
-                    ease: "power2.out"
-                })
+                    duration: 0.65,
+                    stagger: 0.12,
+                    ease: 'power3.out',
+                    clearProps: 'willChange,transform',
+                }, '<-=0.03')
             }
         } else if (refs.projectsListRef?.current) {
             // Projects page animations

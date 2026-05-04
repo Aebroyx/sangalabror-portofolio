@@ -1,9 +1,17 @@
 'use client'
 
+import type { CSSProperties } from 'react'
 import type { Education } from '@/types/sanity'
 
 interface EducationTimelineProps {
   education: Education[]
+}
+
+const hiddenLineStyle: CSSProperties = {
+  opacity: 0,
+  transform: 'scaleY(0)',
+  transformOrigin: 'top center',
+  willChange: 'opacity, transform',
 }
 
 export default function EducationTimeline({ education }: EducationTimelineProps) {
@@ -14,12 +22,16 @@ export default function EducationTimeline({ education }: EducationTimelineProps)
         const isLast = index === education.length - 1
 
         return (
-          <li 
-            key={item._id} 
-            style={{ opacity: 0, transform: 'translateY(100px)' }}
-          >
-            {index > 0 && <hr />}
-            <div className="timeline-middle">
+          <li key={item._id}>
+            {index > 0 && <hr className="timeline-anim-line" style={hiddenLineStyle} />}
+            <div
+              className="timeline-middle timeline-anim-icon"
+              style={{
+                opacity: 0,
+                transform: 'scale(0.6)',
+                willChange: 'opacity, transform',
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -34,7 +46,12 @@ export default function EducationTimeline({ education }: EducationTimelineProps)
               </svg>
             </div>
             <div
-              className={`${isEven ? 'timeline-start md:text-end' : 'timeline-end'} mb-10 text-white`}
+              className={`${isEven ? 'timeline-start md:text-end' : 'timeline-end'} mb-10 text-white timeline-anim-content`}
+              style={{
+                opacity: 0,
+                transform: 'translate3d(0, 24px, 0)',
+                willChange: 'opacity, transform',
+              }}
             >
               <time className="font-mono italic text-white">{item.year}</time>
               <div className="text-lg text-primary">{item.institution}</div>
@@ -46,7 +63,7 @@ export default function EducationTimeline({ education }: EducationTimelineProps)
                 </>
               )}
             </div>
-            {!isLast && <hr />}
+            {!isLast && <hr className="timeline-anim-line" style={hiddenLineStyle} />}
           </li>
         )
       })}
