@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     description: 'Portfolio of Sangalabror Pujianto, a passionate Full Stack Developer and UI/UX Designer specializing in modern web applications, mobile apps, and innovative digital solutions.',
     images: [
       {
-        url: '/portrait.png',
-        width: 1200,
-        height: 630,
-        alt: 'Sangalabror Pujianto - Software Engineer',
+        url: '/dp-splogo-transparent.png',
+        width: 512,
+        height: 294,
+        alt: 'Sangalabror Pujianto - SP Logo',
       },
     ],
   },
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sangalabror Pujianto - Software Engineer',
     description: 'Portfolio of Sangalabror Pujianto, a passionate Full Stack Developer and UI/UX Designer specializing in modern web applications, mobile apps, and innovative digital solutions.',
-    images: ['/portrait.png'],
+    images: ['/dp-splogo-transparent.png'],
     creator: '@sangalabror',
   },
   robots: {
@@ -111,7 +111,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
               "jobTitle": "Software Engineer",
               "description": "Passionate Full Stack Developer and UI/UX Designer specializing in modern web applications, mobile apps, and innovative digital solutions.",
               "url": "https://sangalabror.aebroyx.dev",
-              "image": "https://sangalabror.aebroyx.dev/portrait.png",
+              "image": "https://sangalabror.aebroyx.dev/dp-splogo-transparent.png",
               "sameAs": [
                 "https://github.com/aebroyx",
                 "https://linkedin.com/in/sangalabrorpujianto/",
