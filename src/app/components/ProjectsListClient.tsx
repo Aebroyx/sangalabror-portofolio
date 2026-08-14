@@ -11,7 +11,7 @@ export default function ProjectsListClient({ projects }: ProjectsListClientProps
   return (
     <>
       <div
-        className="max-h-[36rem] min-h-[36rem] overflow-y-auto overflow-x-hidden w-full max-w-4xl scrollbar-hide"
+        className="max-h-[36rem] min-h-[36rem] overflow-y-auto overflow-x-hidden w-full max-w-4xl scrollbar-hide px-6"
         style={{
           // Fade only at the very edges; full opacity in the middle band so row 1 is not stuck in a dim ramp
           maskImage:
@@ -28,8 +28,8 @@ export default function ProjectsListClient({ projects }: ProjectsListClientProps
               style={{ opacity: 0, transform: 'translateY(60px)' }}
             >
               <div className="text-center">
-                <Link href={`/projects/${project.slug}`}>
-                  <h1 className="text-3xl font-semibold transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer bg-gradient-to-r from-white from-85% to-neutral-600 bg-clip-text text-transparent">
+                <Link href={`/projects/${project.slug}`} className="mx-auto block max-w-[90%]">
+                  <h1 className="text-3xl font-semibold origin-center transition duration-300 ease-in-out hover:scale-110 cursor-pointer bg-gradient-to-r from-white from-85% to-neutral-600 bg-clip-text text-transparent">
                     {project.title}
                   </h1>
                 </Link>
