@@ -11,7 +11,7 @@ export default function ProjectsListClient({ projects }: ProjectsListClientProps
   return (
     <>
       <div
-        className="max-h-[36rem] min-h-[36rem] overflow-y-auto overflow-x-hidden w-full max-w-4xl scrollbar-hide px-6"
+        className="h-[calc(100dvh-16rem)] xl:h-[calc(100dvh-15rem)] overflow-y-auto overflow-x-hidden w-full max-w-4xl scrollbar-hide px-6"
         style={{
           // Fade only at the very edges; full opacity in the middle band so row 1 is not stuck in a dim ramp
           maskImage:
