@@ -5,10 +5,37 @@ import Image from 'next/image'
 import { ArrowsPointingOutIcon } from '@heroicons/react/24/outline'
 import { urlFor } from '@/sanity/image'
 import ModalViewImage from './ModalViewImage'
+import Skeleton from './Skeleton'
 import type { ShowcaseImage } from '@/types/sanity'
 
 interface ProjectImageGalleryProps {
   images: ShowcaseImage[]
+}
+
+interface GalleryImageProps {
+  imageUrl: string
+  alt: string
+}
+
+function GalleryImage({ imageUrl, alt }: GalleryImageProps) {
+  const [loaded, setLoaded] = useState(false)
+
+  return (
+    <div className="relative overflow-hidden rounded-lg bg-neutral-900 ring-1 ring-primary w-full h-64 lg:h-80 group cursor-pointer">
+      <Image
+        src={imageUrl}
+        alt={alt}
+        fill
+        className={`object-cover transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        onLoad={() => setLoaded(true)}
+      />
+      {!loaded && <Skeleton className="absolute inset-0" />}
+      <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
+        <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+      </div>
+    </div>
+  )
 }
 
 export default function ProjectImageGallery({ images }: ProjectImageGalleryProps) {
@@ -76,18 +103,7 @@ export default function ProjectImageGallery({ images }: ProjectImageGalleryProps
               className={gridClasses}
               onClick={() => handleOnViewImage(imageUrl)}
             >
-              <div className="relative overflow-hidden rounded-lg bg-white ring-1 ring-primary w-full h-64 lg:h-80 group cursor-pointer">
-                <Image
-                  src={imageUrl}
-                  alt={item.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-0 group-hover:bg-opacity-75 transition-opacity">
-                  <ArrowsPointingOutIcon className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
+              <GalleryImage imageUrl={imageUrl} alt={item.alt} />
             </div>
           )
         })}

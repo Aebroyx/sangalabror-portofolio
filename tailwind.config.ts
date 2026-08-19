@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#8A73F9',
-      }
+      },
     },
   },
   plugins: [require('daisyui'), require('@tailwindcss/typography')],
