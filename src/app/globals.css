@@ -70,6 +70,23 @@
   transition: border-color 200ms ease, filter 300ms ease-in-out;
 }
 
+/* v3 button surface: translucent "glass" tile over the glyph field.
+   Replaces the v2 `bg-gradient-to-l from-neutral-800 to-black border-neutral-700` look.
+   The :hover selector is included so daisyUI's .btn:hover background doesn't override it. */
+.nav-btn-surface,
+.nav-btn-surface:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  background-image: none;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.nav-btn-link:hover .nav-btn-surface {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
 .nav-btn-link:hover .nav-btn {
   filter: drop-shadow(0 0 12px rgba(204, 186, 228, 0.6))
          drop-shadow(0 0 30px rgba(138, 115, 249, 0.35));
