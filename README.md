@@ -1,4 +1,4 @@
-# 🚀 Sangalabror Pujianto - Portfolio Website v2.3
+# 🚀 Sangalabror Pujianto - Portfolio Website v3.0
 
 A modern, responsive portfolio website built with cutting-edge web technologies and powered by a headless CMS for seamless content management.
 
@@ -16,7 +16,8 @@ A modern, responsive portfolio website built with cutting-edge web technologies 
 - **SEO Friendly** - Built-in SEO optimization with Next.js metadata
 - **TypeScript** - Full type safety throughout the codebase
 - **Auto-Revalidation** - Webhook-based content updates in real-time
-- **Animated Gradient Blobs** - GSAP-animated purple gradient blobs that move across the background
+- **Glyph Field Background** - Canvas grid of dim code glyphs on a near-black base, with glowing ripples that expand from every click (including buttons and navigation)
+- **Glass Surfaces** - Translucent buttons that sit on top of the glyph field
 - **Cursor Edge Glow** - Interactive border glow effect that follows cursor position
 
 ## 🛠️ Tech Stack
@@ -300,6 +301,11 @@ While this is a personal portfolio, suggestions and feedback are welcome:
 4. Submit a pull request
 
 ## 📝 Version History
+
+### v3.0.0
+- ✨ Replaced the blurred SVG and animated gradient blobs with a canvas glyph field: a near-black grid of code glyphs that ripples outward from clicks
+- ✨ Glass button surfaces that let the glyph field show through (hover glow and gradient text unchanged)
+- ♻️ v2 background code (`GradientBlobs`, blur layer) kept in the repo but disabled, so it can be switched back on
 
 ### v2.2.0
 - ✨ Added animated gradient blobs background with GSAP animations
