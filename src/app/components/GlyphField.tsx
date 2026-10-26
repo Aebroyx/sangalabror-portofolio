@@ -40,8 +40,9 @@ const ACCENT_RGB = [206, 202, 251] as const // #cecafb
 const GLOW_RGB = [138, 115, 249] as const // tailwind `primary` #8A73F9
 const GLOW_ALPHA = 0.22 // peak alpha of the soft ring glow on the overlay layer
 
-const IGNORE_SELECTOR =
-  'a, button, input, textarea, select, label, summary, [role="button"], [data-no-ripple]'
+// Clicks anywhere (including buttons and navigation) spawn a ripple, except on
+// text inputs and anything explicitly opted out.
+const IGNORE_SELECTOR = 'input, textarea, select, [data-no-ripple]'
 
 interface Ripple {
   x: number
