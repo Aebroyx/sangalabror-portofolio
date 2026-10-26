@@ -35,7 +35,7 @@ const RIPPLE_SCRAMBLE = 0.35 // chance a cell at the wavefront swaps glyph
 const MAX_RIPPLES = 8
 
 // Colors (idle gray -> accent purple)
-const IDLE_RGB = [140, 140, 152] as const
+const IDLE_RGB = [120, 120, 134] as const
 const ACCENT_RGB = [206, 202, 251] as const // #cecafb
 const GLOW_RGB = [138, 115, 249] as const // tailwind `primary` #8A73F9
 const GLOW_ALPHA = 0.22 // peak alpha of the soft ring glow on the overlay layer

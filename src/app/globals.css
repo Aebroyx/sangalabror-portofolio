@@ -14,7 +14,8 @@
 
 #app {
   position: relative;
-  background-color: #262626;
+  /* v3: near-black base behind the GlyphField. v2 used #262626 with the blur layer below. */
+  background-color: #0b0b0c;
 }
 
 /* v2 blurred background layer (disabled in v3 in favor of GlyphField).
