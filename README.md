@@ -307,6 +307,12 @@ While this is a personal portfolio, suggestions and feedback are welcome:
 - ✨ Glass button surfaces that let the glyph field show through (hover glow and gradient text unchanged)
 - ♻️ v2 background code (`GradientBlobs`, blur layer) kept in the repo but disabled, so it can be switched back on
 
+### v2.3.0
+- ✨ New logo with a gradient mask and hover transition, plus refreshed favicon and app icons
+- ✨ Nav buttons gain a hover glow and gradient text
+- ✨ Animated education timeline, and restyled project gallery, image modal, and page layouts
+- 📝 Portfolio title and role updated to Software Engineer
+
 ### v2.2.0
 - ✨ Added animated gradient blobs background with GSAP animations
 
