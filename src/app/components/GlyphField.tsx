@@ -20,9 +20,9 @@ const CELL = 18 // px per cell (CSS px)
 const FONT_SIZE = 11 // px
 
 // Idle look
-const BASE_INTENSITY = 0.2 // idle glyph brightness, 0..1
+const BASE_INTENSITY = 0.1 // idle glyph brightness, 0..1
 const FLICKER_RATE = 0.0025 // fraction of cells that flicker per frame
-const FLICKER_PULSE = 0.22 // brightness pulse added on flicker
+const FLICKER_PULSE = 0.14 // brightness pulse added on flicker
 const PULSE_DECAY = 0.9 // per-frame multiplier on the pulse
 const EASE = 0.3 // how fast drawn intensity approaches target
 
@@ -35,7 +35,7 @@ const RIPPLE_SCRAMBLE = 0.35 // chance a cell at the wavefront swaps glyph
 const MAX_RIPPLES = 8
 
 // Colors (idle gray -> accent purple)
-const IDLE_RGB = [168, 168, 180] as const
+const IDLE_RGB = [140, 140, 152] as const
 const ACCENT_RGB = [206, 202, 251] as const // #cecafb
 const GLOW_RGB = [138, 115, 249] as const // tailwind `primary` #8A73F9
 const GLOW_ALPHA = 0.22 // peak alpha of the soft ring glow on the overlay layer
@@ -132,7 +132,7 @@ export default function GlyphField() {
       ctx.clearRect(x, y, CELL, CELL)
 
       const t = Math.min(1, intensity)
-      const alpha = 0.1 + t * 0.85
+      const alpha = 0.05 + t * 0.9
       const rr = IDLE_RGB[0] + (ACCENT_RGB[0] - IDLE_RGB[0]) * t
       const gg = IDLE_RGB[1] + (ACCENT_RGB[1] - IDLE_RGB[1]) * t
       const bb = IDLE_RGB[2] + (ACCENT_RGB[2] - IDLE_RGB[2]) * t

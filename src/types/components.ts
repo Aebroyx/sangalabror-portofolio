@@ -43,3 +43,15 @@ export interface CursorPosition {
 export interface BorderGlowProps {
   children: React.ReactNode
 }
+
+export interface BlobConfig {
+  id: number
+  color: string
+  initialX: number
+  initialY: number
+  size: number
+}
+
+export interface GradientBlobsProps {
+  blobCount?: number
+}

@@ -9,6 +9,9 @@ import FooterWrapper from '@/app/components/FooterWrapper'
 import DeviceRedirect from '@/app/components/DeviceRedirect'
 import BorderGlow from '@/app/components/BorderGlow'
 import GlyphField from '@/app/components/GlyphField'
+// v2 background, kept for easy switch-back: swap <GlyphField /> for <GradientBlobs />
+// and re-enable the `#app::before` blur layer in globals.css.
+// import GradientBlobs from '@/app/components/GradientBlobs'
 import { getSiteSettings } from '@/sanity/lib/fetch'
 
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
@@ -133,6 +136,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       <body className={`flex flex-col min-h-[100dvh] ${jakartaSans.className}`}>
         <BorderGlow>
           <GlyphField />
+          {/* <GradientBlobs /> */}
           <DeviceRedirect />
           <NavbarWrapper cvUrl={siteSettings?.cvUrl} />
           <main className="flex-1 flex flex-col items-center justify-center w-full">

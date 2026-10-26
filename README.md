@@ -127,7 +127,9 @@ sangalabror-portofolio/
 │   │   │   └── revalidate/    # Webhook endpoint
 │   │   ├── components/        # Reusable components
 │   │   │   ├── BorderGlow.tsx         # Cursor edge glow effect
-│   │   │   ├── GlyphField.tsx         # Canvas glyph-grid background with click ripples
+│   │   │   ├── GlyphField.tsx         # Canvas glyph-grid background with click ripples (v3)
+│   │   │   ├── GradientBlobs.tsx      # Animated background blobs (v2, kept but not rendered)
+│   │   │   ├── useGradientBlobs.ts    # GSAP animation hook for blobs
 │   │   │   └── ...
 │   │   ├── globals.css        # Global styles
 │   │   └── layout.tsx         # Root layout
