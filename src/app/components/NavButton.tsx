@@ -65,9 +65,10 @@ export default function NavButton({ href, label, external = false, disabled = fa
     }
   }, [disabled, label])
 
+  // v2 surface (kept for reference): bg-gradient-to-l from-neutral-800 to-black border-neutral-700
   const buttonClass = disabled
-    ? `btn nav-btn bg-gradient-to-l from-neutral-800 to-black text-white opacity-50 cursor-not-allowed border border-neutral-800 sm:min-w-[124px]`
-    : `btn nav-btn bg-gradient-to-l from-neutral-800 to-black text-white border border-neutral-700 sm:min-w-[124px]`
+    ? `btn nav-btn nav-btn-surface text-white opacity-50 cursor-not-allowed border sm:min-w-[124px]`
+    : `btn nav-btn nav-btn-surface text-white border sm:min-w-[124px]`
 
   const buttonContent = (
     <button ref={buttonRef} className={buttonClass} disabled={disabled}>

@@ -122,7 +122,8 @@ export default function LinksContent({ cvUrl }: LinksContentProps) {
                   rel={link.url.startsWith('http') ? 'noopener noreferrer' : ''}
                   className="nav-btn-link block w-full"
                 >
-                  <span className="btn nav-btn !h-auto min-h-12 w-full rounded-lg bg-gradient-to-l from-neutral-800 to-black border border-neutral-700 px-4 py-3.5 text-base font-medium text-white">
+                  {/* v2 surface (kept for reference): bg-gradient-to-l from-neutral-800 to-black border-neutral-700 */}
+                  <span className="btn nav-btn nav-btn-surface !h-auto min-h-12 w-full rounded-lg border px-4 py-3.5 text-base font-medium text-white">
                     <span className="flex w-full items-center justify-center gap-2">
                       <span className="nav-btn-icon flex size-7 shrink-0 items-center justify-center text-xl leading-none transition-colors duration-200">
                         {link.icon}
