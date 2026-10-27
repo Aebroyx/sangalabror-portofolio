@@ -22,7 +22,7 @@ const FONT_SIZE = 11 // px
 // Idle look
 const BASE_INTENSITY = 0.1 // idle glyph brightness, 0..1
 const FLICKER_RATE = 0.0025 // fraction of cells that flicker per frame
-const FLICKER_PULSE = 0.14 // brightness pulse added on flicker
+const FLICKER_PULSE = 0.24 // brightness pulse added on flicker
 const PULSE_DECAY = 0.9 // per-frame multiplier on the pulse
 const EASE = 0.3 // how fast drawn intensity approaches target
 
