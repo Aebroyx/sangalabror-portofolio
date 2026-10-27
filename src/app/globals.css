@@ -103,6 +103,30 @@
   color: #cecafb;
 }
 
+/* Footer credit sits above the icons, out of flow, so revealing it does not
+   move them. Touch screens never match this query, so phones keep it hidden. */
+.footer-description {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  padding-bottom: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+
+.footer-description p {
+  margin-top: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer-reveal:hover .footer-description {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 /* Hide footer description on low-resolution screens and when zoomed */
 @media (max-height: 700px) {
   .footer-description {

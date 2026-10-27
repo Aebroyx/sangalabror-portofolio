@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
@@ -7,12 +7,28 @@ import Skeleton from './Skeleton'
 import { ModalViewImageProps } from '@/types'
 
 export default function ModalViewImage({ open, setOpen, imageSrc }: ModalViewImageProps) {
+  const panelRef = useRef<HTMLDivElement>(null)
   const [loaded, setLoaded] = useState(false)
+  const [box, setBox] = useState<{ w: number; h: number } | null>(null)
 
   // Reset the fade-in when a different image is opened
   useEffect(() => {
     setLoaded(false)
+    setBox(null)
   }, [imageSrc])
+
+  const handleLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = event.currentTarget
+    const panel = panelRef.current
+    const maxW = panel?.clientWidth || img.naturalWidth
+    const maxH = panel?.clientHeight || img.naturalHeight
+    const scale = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight)
+    setBox({
+      w: Math.max(1, Math.round(img.naturalWidth * scale)),
+      h: Math.max(1, Math.round(img.naturalHeight * scale)),
+    })
+    setLoaded(true)
+  }
 
   return (
     <Dialog open={open} onClose={() => setOpen(false)} className="relative z-50">
@@ -32,23 +48,27 @@ export default function ModalViewImage({ open, setOpen, imageSrc }: ModalViewIma
         </button>
 
         <DialogPanel
+          ref={panelRef}
           transition
           onClick={() => setOpen(false)}
-          className="relative h-[85vh] w-full max-w-6xl cursor-zoom-out transition data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
+          className="relative flex h-[85vh] w-full max-w-6xl cursor-zoom-out items-center justify-center transition data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
         >
-          {imageSrc && (
-            <Image
-              src={imageSrc}
-              alt="Project image preview"
-              fill
-              sizes="100vw"
-              className={`object-contain transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
-              onLoad={() => setLoaded(true)}
-            />
-          )}
-          {!loaded && (
-            <Skeleton className="absolute inset-0 m-auto h-3/4 w-full max-w-4xl rounded-2xl" />
-          )}
+          <div
+            className={`relative overflow-hidden rounded-2xl ${loaded && box ? '' : 'h-3/4 w-full max-w-4xl'}`}
+            style={loaded && box ? { width: box.w, height: box.h } : undefined}
+          >
+            {imageSrc && (
+              <Image
+                src={imageSrc}
+                alt="Project image preview"
+                fill
+                sizes="100vw"
+                className={`object-contain transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+                onLoad={handleLoad}
+              />
+            )}
+            {!loaded && <Skeleton className="absolute inset-0" />}
+          </div>
         </DialogPanel>
       </div>
     </Dialog>
