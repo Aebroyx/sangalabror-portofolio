@@ -134,11 +134,6 @@ export default function LinksContent({ cvUrl }: LinksContentProps) {
                 </a>
               ))}
             </div>
-
-            {/* Footer */}
-            <div className="text-center mt-8 text-gray-400 text-sm">
-              <p>Thanks for visiting! ✨</p>
-            </div>
           </section>
         </div>
       </div>
